@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" role="img" aria-labelledby="t d">
+  <title id="t">Kopi Senja - Es Kopi Susu Gula Aren poster</title>
+  <desc id="d">Iced palm-sugar milk coffee in a tall glass on a dark espresso background, price Rp25.000.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#4A2E1C"/>
+      <stop offset="1" stop-color="#2B1B12"/>
+    </radialGradient>
+    <linearGradient id="coffee" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5E9D7"/>
+      <stop offset="0.38" stop-color="#E9C99A"/>
+      <stop offset="0.62" stop-color="#C98A3C"/>
+      <stop offset="1" stop-color="#5A3216"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5E9D7" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#F5E9D7" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#F5E9D7" stop-opacity="0.25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#D98E32" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#D98E32" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="cup"><path d="M370 470 L710 470 L682 1010 Q678 1040 648 1040 L432 1040 Q402 1040 398 1010 Z"/></clipPath>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <circle cx="540" cy="760" r="430" fill="url(#glow)"/>
+
+  <!-- Brand -->
+  <text x="540" y="150" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="14" fill="#D98E32">KOPI SENJA</text>
+  <line x1="480" y1="180" x2="600" y2="180" stroke="#D98E32" stroke-width="2"/>
+
+  <!-- Headline -->
+  <text x="540" y="300" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700" fill="#F5E9D7">Es Kopi Susu</text>
+  <text x="540" y="400" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-style="italic" fill="#D98E32">Gula Aren</text>
+
+  <!-- Glass body -->
+  <g clip-path="url(#cup)">
+    <rect x="360" y="470" width="360" height="580" fill="#2B1B12" opacity="0.5"/>
+    <rect x="360" y="560" width="360" height="490" fill="url(#coffee)"/>
+    <!-- palm sugar swirls -->
+    <path d="M420 640 Q470 600 520 650 T620 640" fill="none" stroke="#5A3216" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+    <path d="M440 720 Q500 690 550 735 T665 715" fill="none" stroke="#5A3216" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+    <!-- ice cubes -->
+    <g fill="#F5E9D7" fill-opacity="0.38" stroke="#F5E9D7" stroke-opacity="0.7" stroke-width="3">
+      <rect x="418" y="520" width="104" height="104" rx="16" transform="rotate(-12 470 572)"/>
+      <rect x="540" y="500" width="112" height="112" rx="16" transform="rotate(9 596 556)"/>
+      <rect x="470" y="640" width="100" height="100" rx="16" transform="rotate(6 520 690)"/>
+      <rect x="578" y="660" width="92" height="92" rx="14" transform="rotate(-14 624 706)"/>
+    </g>
+  </g>
+  <!-- Glass outline and highlights -->
+  <path d="M370 470 L710 470 L682 1010 Q678 1040 648 1040 L432 1040 Q402 1040 398 1010 Z" fill="url(#glass)" stroke="#F5E9D7" stroke-opacity="0.75" stroke-width="5"/>
+  <path d="M398 500 L420 1000" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="9" stroke-linecap="round"/>
+  <!-- Straw -->
+  <path d="M640 428 L606 560" stroke="#D98E32" stroke-width="22" stroke-linecap="round"/>
+  <path d="M640 428 L606 560" stroke="#F5E9D7" stroke-width="6" stroke-linecap="round" stroke-dasharray="26 26" opacity="0.8"/>
+  <!-- Condensation drops -->
+  <g fill="#F5E9D7" fill-opacity="0.6">
+    <circle cx="672" cy="620" r="7"/><circle cx="660" cy="780" r="9"/><circle cx="650" cy="900" r="6"/>
+    <circle cx="420" cy="860" r="7"/><circle cx="432" cy="960" r="5"/>
+  </g>
+  <!-- Shadow under glass -->
+  <ellipse cx="540" cy="1056" rx="190" ry="16" fill="#000000" opacity="0.35"/>
+
+  <!-- Price badge -->
+  <circle cx="860" cy="600" r="112" fill="#D98E32"/>
+  <text x="860" y="582" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#2B1B12" letter-spacing="3">HANYA</text>
+  <text x="860" y="636" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#2B1B12">Rp25.000</text>
+
+  <!-- Footer / CTA -->
+  <rect x="290" y="1130" width="500" height="92" rx="46" fill="#F5E9D7"/>
+  <text x="540" y="1189" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" fill="#2B1B12" letter-spacing="2">COBA HARI INI</text>
+  <text x="540" y="1285" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#F5E9D7" opacity="0.85">Gula aren asli. Susu segar. Es batu penuh.</text>
+</svg>
