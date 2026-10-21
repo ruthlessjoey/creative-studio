@@ -1,0 +1,52 @@
+name: Render video
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: "Project folder name under projects/ (lowercase, e.g. coffee-launch)"
+        required: true
+        default: "coffee-launch"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PROJECT: ${{ inputs.project }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-liberation
+
+      - name: Install Playwright and Chromium
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Render
+        run: python scripts/render_video.py "$PROJECT"
+
+      - name: Save as downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ inputs.project }}
+          path: projects/${{ inputs.project }}/video/out/*.mp4
+
+      - name: Commit the rendered MP4 to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "projects/$PROJECT/video/out/"*.mp4
+          git commit -m "render: $PROJECT video" || echo "nothing to commit"
+          git push
