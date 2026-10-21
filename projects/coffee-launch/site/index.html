@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kopi Senja | Es Kopi Susu Gula Aren</title>
+  <meta name="description" content="Es Kopi Susu Gula Aren dari Kopi Senja. Gula aren asli, susu segar, es batu penuh. Rp25.000.">
+  <meta name="theme-color" content="#2B1B12">
+  <style>
+    :root{
+      --espresso:#2B1B12; --espresso-2:#3A261A; --cream:#F5E9D7; --amber:#D98E32; --sugar:#5A3216;
+      --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--espresso);color:var(--cream);font-family:var(--sans);line-height:1.6;font-size:1.0625rem}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--amber)}
+    :focus-visible{outline:3px solid var(--cream);outline-offset:3px;border-radius:6px}
+    .wrap{width:100%;max-width:960px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px}
+    header{padding-top:20px;padding-bottom:0;text-align:center}
+    .brand{font-family:var(--serif);letter-spacing:.35em;color:var(--amber);font-size:1rem;margin:0;text-indent:.35em}
+    .hero{padding:28px 16px 40px;display:grid;gap:28px}
+    h1{font-family:var(--serif);font-size:clamp(2.25rem,9vw,3.75rem);line-height:1.08;margin:0}
+    h1 em{color:var(--amber);font-weight:400}
+    .lead{margin:14px 0 0;opacity:.9;max-width:34ch}
+    .price{display:inline-block;margin:18px 0 0;background:var(--amber);color:var(--espresso);font-weight:800;border-radius:999px;padding:6px 18px;font-size:1.25rem}
+    .btn{display:inline-block;margin-top:22px;background:var(--cream);color:var(--espresso);font-weight:800;letter-spacing:.06em;text-decoration:none;border-radius:999px;padding:16px 32px;min-height:48px}
+    .btn:hover{background:#fff}
+    .poster{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+    section{padding-top:36px;padding-bottom:36px;border-top:1px solid rgba(245,233,215,.15)}
+    h2{font-family:var(--serif);font-size:1.75rem;margin:0 0 18px}
+    .cards{display:grid;gap:14px;list-style:none;padding:0;margin:0}
+    .cards li{background:var(--espresso-2);border-radius:14px;padding:18px}
+    .cards strong{display:block;color:var(--amber);font-family:var(--serif);font-size:1.2rem;margin-bottom:4px}
+    .menu{background:var(--espresso-2);border-radius:14px;padding:20px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+    .menu p{margin:0}
+    .menu .name{font-weight:700}
+    .menu .desc{opacity:.85;font-size:.95rem}
+    .menu .amt{font-weight:800;color:var(--amber);white-space:nowrap}
+    footer{padding-top:28px;padding-bottom:40px;text-align:center;font-size:.9rem;opacity:.8;border-top:1px solid rgba(245,233,215,.15)}
+    @media (min-width:760px){
+      .hero{grid-template-columns:1.1fr .9fr;align-items:center;padding:56px 16px}
+      .cards{grid-template-columns:repeat(3,1fr)}
+      header{padding-top:32px}
+    }
+    @media (prefers-reduced-motion:no-preference){
+      .btn,.poster{transition:transform .2s ease}
+      .btn:hover{transform:translateY(-2px)}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap"><p class="brand">KOPI SENJA</p></header>
+  <main>
+    <div class="wrap hero">
+      <div>
+        <h1>Es Kopi Susu <em>Gula Aren</em></h1>
+        <p class="lead">Rasa manis gula aren asli bertemu kopi pekat dan susu segar. Dingin, harum, dan pas untuk sore harimu.</p>
+        <span class="price">Rp25.000</span><br>
+        <a class="btn" href="#datang">COBA HARI INI</a>
+      </div>
+      <div class="poster">
+        <img src="../poster/poster.svg" width="1080" height="1350" alt="Segelas es kopi susu gula aren dengan es batu dan sedotan, harga Rp25.000">
+      </div>
+    </div>
+
+    <section class="wrap" aria-labelledby="kenapa">
+      <h2 id="kenapa">Kenapa enak</h2>
+      <ul class="cards">
+        <li><strong>Gula aren asli</strong>Manis karamel alami, tidak tajam.</li>
+        <li><strong>Susu segar</strong>Lembut dan creamy di setiap tegukan.</li>
+        <li><strong>Es batu penuh</strong>Tetap dingin sampai tegukan terakhir.</li>
+      </ul>
+    </section>
+
+    <section class="wrap" aria-labelledby="menu">
+      <h2 id="menu">Menu</h2>
+      <div class="menu">
+        <div>
+          <p class="name">Es Kopi Susu Gula Aren</p>
+          <p class="desc">Kopi, susu segar, gula aren, es batu.</p>
+        </div>
+        <p class="amt">Rp25.000</p>
+      </div>
+    </section>
+
+    <section class="wrap" id="datang" aria-labelledby="dtg">
+      <h2 id="dtg">Datang ke Kopi Senja</h2>
+      <p>Alamat dan jam buka akan diumumkan segera. Ini halaman contoh dengan merek placeholder.</p>
+    </section>
+  </main>
+  <footer class="wrap">&copy; Kopi Senja (contoh demo)</footer>
+</body>
+</html>
