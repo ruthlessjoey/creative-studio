@@ -51,7 +51,8 @@ jobs:
 
       - name: Doctor
         working-directory: projects/${{ env.PROJECT }}/hyperframes
-        run: npx --yes "$HF" doctor --json | tee ../doctor.json | jq '{ok, checks: [.checks[] | {name, ok}]}' || true
+        run: |
+          npx --yes "$HF" doctor --json | tee ../doctor.json | jq '{ok, checks: [.checks[] | {name, ok}]}' || true
 
       - name: Check (lint, runtime, layout, contrast)
         working-directory: projects/${{ env.PROJECT }}/hyperframes
