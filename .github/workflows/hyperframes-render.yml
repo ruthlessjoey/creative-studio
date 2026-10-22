@@ -93,10 +93,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f "projects/$PROJECT/out" "projects/$PROJECT/check.json" "projects/$PROJECT/doctor.json" "projects/$PROJECT/render.log" || true
-          git add -f "projects/$PROJECT/hyperframes/.hyperframes/artifacts" 2>/dev/null || true
-          if git diff --cached --quiet; then echo "nothing to commit"; else
-            git commit -m "render: $PROJECT via HyperFrames [skip ci]"
-            git pull --rebase -q origin "$GITHUB_REF_NAME" || true
-            git push
-          fi
+          git add -f "projects/$PROJECT/out" "projects/$PROJECT/check.json" "projects/$PROJECT/doctor.json" "projects/$PROJECT/render.log" 2>&1 || true
+          git add -f "projects/$PROJECT/hyperframes/.hyperframes/artifacts" 2>&1 || true
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          out=$(git commit -m "render: $PROJECT via HyperFrames [skip ci]" 2>&1) || { echo "::error::commit failed: $(echo "$out" | tr '\n' ' ')"; exit 1; }
+          git fetch -q origin "$GITHUB_REF_NAME" || true
+          git rebase --autostash "origin/$GITHUB_REF_NAME" 2>&1 || true
+          out=$(git push origin "HEAD:refs/heads/$GITHUB_REF_NAME" 2>&1) || { echo "::error::push failed: $(echo "$out" | tr '\n' ' ')"; git status --short | head -20; exit 1; }
+          echo "$out"
