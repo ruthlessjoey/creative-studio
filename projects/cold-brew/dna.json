@@ -1,0 +1,6 @@
+{"meta":{"name":"Cold Brew v2","description":"Editorial coffee: giant stacked type, liquid streams, spec-sheet labels","source_references":["IV-bag coffee","DRIP x3","text-bubbles vodka","DROPPED Just","BREWING label"],"created_at":"2026-10-22"},
+"design_system":{"color":{"palette_type":"warm neutral + one amber liquid + one red accent","primary":{"hex":"#2A160A","role":"type, rules"},"secondary":{"hex":"#5B3220","role":"second type row"},"accent":{"hex":"#B0121C","role":"script accent"},"neutral":{"scale":["#EDE8DE","#9A7A58","#2A160A"],"usage":"paper background, light type row, dark text"},"surface":{"background":"#EDE8DE"},"measurement":"Pillow median-cut, 7 colors, 300px thumbnail (approximate; skill's sharp script unavailable offline)"},
+"typography":{"display":"Archivo 900 wdth125","label":"Archivo 500","mono":"DM Mono","script":"Kaushan Script"},
+"layout":{"grid":"70px margins, full-bleed stacked rows, ruled footer table"},"shape":{"radius":"0, hard rules 3px"}},
+"design_style":{"mood":"dry, confident, editorial","archetype":"brutalist-editorial packaging","whitespace":"tight type, generous paper"},
+"visual_effects":{"grain":{"enabled":true,"tech":"SVG feTurbulence"},"liquid":{"enabled":true,"tech":"SVG paths + GSAP"},"scroll":{"enabled":true,"tech":"GSAP ScrollTrigger (site, planned)"}}}

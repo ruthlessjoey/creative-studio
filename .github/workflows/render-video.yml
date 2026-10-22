@@ -34,6 +34,13 @@ jobs:
           pip install playwright
           python -m playwright install --with-deps chromium
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install GSAP 3.15.0 (local copy, used if the page loads GSAP)
+        run: npm install --no-save --no-package-lock gsap@3.15.0
+
       - name: Render
         run: python scripts/render_video.py "$PROJECT"
 
