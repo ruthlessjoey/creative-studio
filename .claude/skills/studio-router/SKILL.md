@@ -9,6 +9,9 @@ description: Entry point for any creative job. Reads the brief, picks only the s
 1. Read `briefs/<job>.md`. If none exists, ask max 3 questions, then write one.
 2. List deliverables. Activate only the matching skills:
    - concept, mood, plan -> creative-director
+   - palette, type, layout, landing page, UI review -> ui-ux-pro-max (run its search script; treat output as advice, cross-check against the brief)
+   - analyze a reference image/site into tokens and style -> design-dna
+   - timing, easing, choreography, animation feel -> motion-design
    - video, motion, audio -> video-ad-producer
 3. Prefer deterministic tools (SVG, CSS, FFmpeg, scripts) over AI generation.
 4. After each stage, write a 5-line summary to `projects/<job>/STATE.md`. Later stages read STATE.md, not the full history.
