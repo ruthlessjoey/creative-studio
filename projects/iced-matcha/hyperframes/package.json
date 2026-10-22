@@ -1,0 +1,9 @@
+{
+  "name": "iced-matcha",
+  "private": true,
+  "scripts": {
+    "check": "npx hyperframes@0.8.185 check --json",
+    "snapshot": "npx hyperframes@0.8.185 snapshot",
+    "render": "npx hyperframes@0.8.185 render --quality delivery --output ../out/iced-matcha-9x16.mp4"
+  }
+}

@@ -112,3 +112,7 @@ Users may invoke any combination:
 - **Phase 3 only**: User already has DNA JSON
 
 Detect which phase(s) are needed from context and execute accordingly.
+
+
+## Product photos vs style references (added)
+A supplied product photo is a constraint to preserve (shape, colour, label), not a style reference to imitate or redraw. Take colour tokens from it by measurement, keep the product pixels as supplied, and apply the DNA to the type, layout, grading overlays and motion around it.

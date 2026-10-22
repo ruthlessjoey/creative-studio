@@ -35,3 +35,10 @@ Archivo, DM Mono, Kaushan Script: SIL Open Font License 1.1, from google/fonts (
 
 ## GSAP 3.15.0
 Loaded from jsDelivr by the site and video pages; the render workflow installs the same version with npm. Not vendored. GSAP Standard No Charge license applies.
+
+
+## HyperFrames (video engine) and its skills
+Apache-2.0, github.com/heygen-com/hyperframes, pinned commit 4371981b (docs read) and CLI hyperframes@0.8.185 (used by the workflow through npx). Skills `hyperframes` and `hyperframes-cli` vendored under .claude/skills/ (scripts excluded; license .claude/skills/HYPERFRAMES-LICENSE). Telemetry disabled in CI (HYPERFRAMES_NO_TELEMETRY=1).
+
+## Fonts (iced-matcha)
+Mrs Saint Delafield: SIL OFL 1.1 (google/fonts), subset to Basic Latin, WOFF, in projects/iced-matcha/hyperframes/assets/fonts. Playfair Display and Montserrat are bundled with HyperFrames and referenced by name.

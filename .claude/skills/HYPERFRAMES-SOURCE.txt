@@ -1,0 +1,6 @@
+HyperFrames skills: hyperframes, hyperframes-cli
+Source: https://github.com/heygen-com/hyperframes (Apache-2.0) at commit 4371981b740d92f70e520cfbec34db68a1c93434
+CLI version these were written for: hyperframes@0.8.185 (projects pin this in package.json scripts)
+Left out: skills/hyperframes/scripts and assets/frame-presets (not needed), registry/media-use/figma/slideshow/remotion skills.
+Official way to refresh when npm is reachable: `npx hyperframes skills update` (or `npx skills add heygen-com/hyperframes`).
+This copy is a vetted, pinned snapshot made from a git clone because npm was not reachable in the build sandbox.
