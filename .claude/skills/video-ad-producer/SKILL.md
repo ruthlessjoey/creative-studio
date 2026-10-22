@@ -1,6 +1,6 @@
 ---
 name: video-ad-producer
-description: Plans and builds short vertical video ads, including script, shot list, sound design, music, narration, and captions, rendered with HyperFrames. Use for any video deliverable.
+description: Plans and builds short vertical video ads, including script, shot list, sound design, music, narration, and captions, rendered by scripts/render_video.py (Chromium + FFmpeg, tested on GitHub Actions). HyperFrames is a planned upgrade, not yet tested. Use for any video deliverable.
 ---
 
 # Video Ad Producer
@@ -11,7 +11,7 @@ description: Plans and builds short vertical video ads, including script, shot l
 ## Outputs (in `projects/<job>/video/`)
 - `script.md`: one narration line, on-screen text, timings
 - `shotlist.md`: shots with start/duration in seconds
-- `index.html`: HyperFrames composition (9:16)
+- `index.html`: seekable composition exposing `window.renderFrame(t)` (9:16)
 - `audio-plan.md`: music, SFX list, narration source, licenses
 
 ## Procedure
@@ -21,8 +21,8 @@ description: Plans and builds short vertical video ads, including script, shot l
    - SFX: ice clink, pour, stir. Same license rule.
    - Narration: use a verified free TTS, otherwise the owner records a voice memo and uploads it.
    - Captions burned in for muted viewing.
-3. Build `index.html` with HyperFrames timing attributes. Read HyperFrames' own skill before writing.
-4. Lint and render per HyperFrames docs (needs Node 22+ and FFmpeg; run in GitHub Actions or Codespaces).
+3. Build `index.html` so every animation is a pure function of time `t` (no wall-clock, no unseeded randomness). Apply the motion-design skill for timing and easing.
+4. Render with the "Render video" GitHub Actions workflow (runs `scripts/render_video.py <project>`). Verify by extracting frames and checking audio levels before reporting success.
 
 ## Quality criteria
 Correct duration and 9:16 size; text readable on a phone; audio not clipped; every audio asset has a license entry; file under 20 MB.
