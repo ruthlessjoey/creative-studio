@@ -87,6 +87,45 @@ def synth_audio(path):
         w.writeframes(b''.join(struct.pack('<h', int(max(-1, min(1, v*scale)) * 32767)) for v in buf))
 
 
+GL_ARGS = ['--use-angle=swiftshader', '--use-gl=angle', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist',
+           '--allow-file-access-from-files']
+
+
+def _gl_worker(html_uri, gdir, frames, fps, outdir, w, h):
+    from playwright.sync_api import sync_playwright
+    import re as _re
+    with sync_playwright() as p:
+        b = p.chromium.launch(args=GL_ARGS)
+        pg = b.new_page(viewport={'width': w, 'height': h})
+        if gdir:
+            pg.route(_re.compile(r'.*/(gsap|ScrollTrigger)\.min\.js'),
+                     lambda r: r.fulfill(path=str(Path(gdir) / r.request.url.rsplit('/', 1)[1]), content_type='application/javascript'))
+        pg.goto(html_uri + '?render=1')
+        pg.wait_for_function('window.__ready === true', timeout=180000)
+        for i in frames:
+            if Path(outdir, f'{i:05d}.jpg').exists():
+                continue  # resume support
+            pg.evaluate(f'window.renderFrame({i / fps})')
+            Path(outdir, f'{i:05d}.jpg').write_bytes(pg.screenshot(type='jpeg', quality=95))
+        b.close()
+
+
+def render_webgl_frames(html, gdir, total, fps, out_dir, w, h):
+    import multiprocessing as mp, shutil
+    fdir = out_dir / 'frames'
+    if not os.environ.get('RESUME'):
+        shutil.rmtree(fdir, ignore_errors=True)
+    fdir.mkdir(parents=True, exist_ok=True)
+    n = int(os.environ.get('WORKERS') or os.cpu_count() or 2)
+    procs = [mp.Process(target=_gl_worker, args=(html.as_uri(), str(gdir) if gdir else None, list(range(k, total, n)), fps, str(fdir), w, h)) for k in range(n)]
+    print(f'   WebGL render with {n} workers, {total} frames', flush=True)
+    [p.start() for p in procs]; [p.join() for p in procs]
+    done = len(list(fdir.glob('*.jpg')))
+    if done != total or any(p.exitcode for p in procs):
+        sys.exit(f'frame render failed: {done}/{total} frames')
+    return fdir
+
+
 def find_gsap(root):
     """Local GSAP build so rendering is deterministic and works offline: $GSAP_DIR, else node_modules/gsap/dist."""
     for c in (os.environ.get('GSAP_DIR'), str(root / 'node_modules' / 'gsap' / 'dist')):
@@ -151,25 +190,33 @@ def main():
         cmd += ['-filter_complex', '[1:a]alimiter=limit=0.95[a]', '-map', '0:v', '-map', '[a]']
     cmd += ['-t', str(DUR), '-c:v', 'libx264', '-preset', 'slow', '-crf', '26', '-pix_fmt', 'yuv420p',
             '-c:a', 'aac', '-b:a', '160k', '-ac', '2', '-movflags', '+faststart', str(mp4)]
-    ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page(viewport={'width': W, 'height': H})
-        gdir = find_gsap(root)
-        if gdir:
-            page.route(re.compile(r'.*/(gsap|ScrollTrigger)\.min\.js'),
-                       lambda r: r.fulfill(path=str(gdir / r.request.url.rsplit('/', 1)[1]), content_type='application/javascript'))
-            print('   GSAP from', gdir)
-        page.goto(html.as_uri() + '?render=1')
-        page.wait_for_function('typeof window.renderFrame === "function"', timeout=30000)
-        page.evaluate('document.fonts.ready')
-        for i in range(total):
-            page.evaluate(f'window.renderFrame({i / FPS})')
-            ff.stdin.write(page.screenshot(type='jpeg', quality=95))
-        browser.close()
-    ff.stdin.close()
-    if ff.wait() != 0:
-        sys.exit('ffmpeg failed')
+    webgl = 'type="module"' in html.read_text()   # three.js / WebGL composition: render frames in parallel workers
+    gdir = find_gsap(root)
+    if webgl:
+        fdir = render_webgl_frames(html, gdir, total, FPS, out_dir, W, H)
+        cmd[cmd.index('image2pipe')] = 'image2'
+        cmd[cmd.index('-i') + 1] = str(fdir / '%05d.jpg')
+        run(cmd)
+        shutil.rmtree(fdir, ignore_errors=True)
+    else:
+        ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page(viewport={'width': W, 'height': H})
+            if gdir:
+                page.route(re.compile(r'.*/(gsap|ScrollTrigger)\.min\.js'),
+                           lambda r: r.fulfill(path=str(gdir / r.request.url.rsplit('/', 1)[1]), content_type='application/javascript'))
+                print('   GSAP from', gdir)
+            page.goto(html.as_uri() + '?render=1')
+            page.wait_for_function('typeof window.renderFrame === "function"', timeout=30000)
+            page.evaluate('document.fonts.ready')
+            for i in range(total):
+                page.evaluate(f'window.renderFrame({i / FPS})')
+                ff.stdin.write(page.screenshot(type='jpeg', quality=95))
+            browser.close()
+        ff.stdin.close()
+        if ff.wait() != 0:
+            sys.exit('ffmpeg failed')
 
     print('3/3 checking output...', flush=True)
     info = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries',

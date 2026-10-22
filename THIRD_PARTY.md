@@ -35,3 +35,9 @@ Archivo, DM Mono, Kaushan Script: SIL Open Font License 1.1, from google/fonts (
 
 ## GSAP 3.15.0
 Loaded from jsDelivr by the site and video pages; the render workflow installs the same version with npm. Not vendored. GSAP Standard No Charge license applies.
+
+## three.js r186 (assets/vendor/three)
+MIT. Pinned 9b4a2ac2 (tag r186) from mrdoob/three.js. Copied: build/three.module.js, build/three.core.js, examples/jsm/environments/RoomEnvironment.js, LICENSE. Not modified.
+
+## CloudAI-X/threejs-skills (.claude/skills/threejs-*)
+MIT. Pinned 0e181866. Installed 10 of 13 skills (fundamentals, materials, lighting, shaders, animation, postprocessing, textures, geometry, performance, interaction). Left out: loaders, asset-pipeline, react-three-fiber (not needed). Re-scanned: no hidden Unicode, symlinks, network or exec instructions. License: .claude/skills/THREEJS-SKILLS-LICENSE.

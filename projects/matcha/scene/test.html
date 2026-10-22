@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><style>
+@font-face{font-family:AB;src:url(../../../assets/fonts/archivo-black-wide.woff)}
+html,body{margin:0}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"../../../assets/vendor/three/three.module.js"}}</script>
+<canvas id="c" width="1080" height="1350"></canvas>
+<script type="module">
+import {createScene} from './scene.js';
+const q=new URLSearchParams(location.search);
+const W=+(q.get('w')||1080),H=+(q.get('h')||1350);const c=document.getElementById('c');c.width=W;c.height=H;
+const s=await createScene({canvas:c,width:W,height:H,pixelRatio:1});
+window.S=s;window.renderAt=(t)=>s.render(t);window.__ready=true;
+</script>

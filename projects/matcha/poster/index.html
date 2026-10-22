@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1080">
+<title>Matcha - 3D poster</title>
+<style>
+@font-face{font-family:AB;src:url(../../../assets/fonts/archivo-black-wide.woff)}
+@font-face{font-family:AM;src:url(../../../assets/fonts/archivo-medium.woff)}
+@font-face{font-family:KS;src:url(../../../assets/fonts/kaushan.woff)}
+@font-face{font-family:DM;src:url(../../../assets/fonts/dmmono.woff)}
+html,body{margin:0;background:#111}
+#stage{position:relative;width:1080px;height:1350px;overflow:hidden;background:#E9E7D8;color:#1F2A0C}
+canvas{position:absolute;left:0;top:0;width:1080px;height:1350px}
+.abs{position:absolute}.mono{font-family:DM;font-size:20px;letter-spacing:1.5px;white-space:nowrap;text-transform:uppercase}
+.rule{position:absolute;left:70px;width:940px;height:3px;background:#1F2A0C}
+.script{position:absolute;left:590px;top:760px;font-family:KS;font-size:170px;color:#B0121C;white-space:nowrap;transform:rotate(-8deg);transform-origin:0 100%}
+.ft{position:absolute;left:70px;width:940px;display:flex;justify-content:space-between;white-space:nowrap}
+.big{font-family:AM;font-size:30px;text-transform:uppercase}
+#grain{position:absolute;inset:0;background:url(../../cold-brew/video/grain.png);opacity:.2;pointer-events:none}
+</style>
+<script type="importmap">{"imports":{"three":"../../../assets/vendor/three/three.module.js"}}</script>
+</head><body><div id="stage">
+ <canvas id="c" width="1080" height="1350"></canvas>
+ <div class="abs mono" style="left:70px;top:50px">Matcha &copy;</div>
+ <div class="abs mono" style="left:0;width:1080px;text-align:center;top:50px">N&ordm; 02 / Batch</div>
+ <div class="abs mono" style="right:70px;top:50px">Iced</div>
+ <div class="rule" style="top:88px"></div>
+ <div class="script">iced</div>
+ <div class="rule" style="top:1135px"></div>
+ <div class="ft big" style="top:1158px"><span>Stone-ground matcha*</span><span>No syrup. No rush.</span></div>
+ <div class="rule" style="top:1218px"></div>
+ <div class="ft mono" style="top:1240px"><span>Net 350 ml*</span><span>Serve over ice</span><span>Rp XX.XXX*</span></div>
+ <div class="abs mono" style="left:70px;top:1298px;font-size:16px;opacity:.75">* Placeholder: confirm with brand</div>
+ <div id="grain"></div>
+</div>
+<script type="module">
+import {createScene} from '../scene/scene.js';
+await Promise.all(['AB','AM','KS','DM'].map(f=>document.fonts.load('20px '+f)));
+const S=await createScene({canvas:document.getElementById('c'),width:1080,height:1350,pixelRatio:1,rows:3});
+S.setCamera({dist:8.3,el:.2,az:.1,ty:1.2});S.render(6.0);window.__ready=true;
+</script></body></html>
