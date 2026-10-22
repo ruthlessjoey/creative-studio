@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cold Brew | Steeped slow</title>
+<meta name="description" content="Cold Brew, steeped cold for 12 hours. No heat, no rush. Demo page with placeholder brand details.">
+<meta name="theme-color" content="#EDE8DE">
+<style>
+@font-face{font-family:AB;src:url(../../../assets/fonts/archivo-black-wide.woff);font-display:swap}
+@font-face{font-family:AM;src:url(../../../assets/fonts/archivo-medium.woff);font-display:swap}
+@font-face{font-family:KS;src:url(../../../assets/fonts/kaushan.woff);font-display:swap}
+@font-face{font-family:DM;src:url(../../../assets/fonts/dmmono.woff);font-display:swap}
+:root{--paper:#EDE8DE;--ink:#2A160A;--roast:#5B3220;--latte:#9A7A58;--amber:#C9731F;--red:#B0121C;--pad:clamp(16px,5vw,56px)}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:AM,system-ui,sans-serif;font-size:1.0625rem;line-height:1.5;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:url(../video/grain.png);opacity:.2;z-index:50}
+a{color:inherit}:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.mono{font-family:DM,ui-monospace,monospace;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.bar{display:flex;justify-content:space-between;gap:12px;padding:18px var(--pad) 12px;border-bottom:3px solid var(--ink);margin:0 var(--pad);padding-left:0;padding-right:0}
+.hero{position:relative;padding:12vw var(--pad) 8vw;overflow:hidden}
+.words{margin:0;font-family:AB;font-weight:400;line-height:.82;text-transform:uppercase;font-size:clamp(3.2rem,22.5vw,15rem);letter-spacing:-.01em}
+.words span{display:block;overflow:hidden;padding-bottom:.04em}
+.words i{display:block;font-style:normal}
+.w1{color:var(--ink)}.w2{color:var(--roast)}.w3{color:var(--latte)}
+.pour{position:absolute;top:0;width:clamp(14px,5.5vw,56px);height:60%;background:linear-gradient(90deg,#7A3E0C,#C9731F 35%,#E39A3C 60%,#8F4A10);transform-origin:50% 0;border-radius:0 0 999px 999px;z-index:2}
+.pour:nth-of-type(1){left:21%}.pour:nth-of-type(2){left:56%;height:46%;width:clamp(12px,4.6vw,46px)}.pour:nth-of-type(3){left:77%;height:34%;width:clamp(10px,3.6vw,36px)}
+.script{position:absolute;right:8%;bottom:11%;font-family:KS;font-size:clamp(2.6rem,14vw,9rem);color:var(--red);transform:rotate(-8deg);line-height:1;z-index:3;margin:0}
+.lead{max-width:30ch;margin:6vw 0 0;font-size:clamp(1.15rem,4.4vw,1.6rem)}
+.cta{display:inline-block;margin-top:24px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:DM;letter-spacing:.1em;text-transform:uppercase;padding:16px 28px;min-height:48px}
+.cta:hover{background:var(--red)}
+.ticker{border-block:3px solid var(--ink);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:AB;font-size:clamp(1.4rem,6vw,2.6rem)}
+.ticker div{display:inline-block;padding-right:2rem;will-change:transform}
+section{padding:clamp(48px,9vw,110px) var(--pad)}
+h2{font-family:AB;font-weight:400;font-size:clamp(2rem,9vw,5rem);line-height:.95;margin:0 0 .6em;text-transform:uppercase}
+.steps{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:3.2rem 1fr;gap:6px 16px;padding:22px 0;border-bottom:3px solid var(--ink)}
+.steps b{font-family:DM;font-weight:400}.steps strong{font-family:AB;font-weight:400;font-size:clamp(1.3rem,5vw,2.2rem);text-transform:uppercase;display:block}
+.steps p{margin:.2em 0 0;grid-column:2;max-width:46ch}
+.media{display:grid;gap:28px}
+.media video,.media img{width:100%;height:auto;display:block;background:var(--ink)}
+.label{border-top:3px solid var(--ink)}
+.label div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:3px solid var(--ink)}
+.note{opacity:.8;margin-top:14px}
+footer{padding:28px var(--pad) 48px;border-top:3px solid var(--ink)}
+@media(min-width:820px){.media{grid-template-columns:1fr 1fr;align-items:start}.media video{max-width:420px}}
+.js .reveal{opacity:0}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1}}
+</style></head>
+<body>
+<header class="bar mono"><span>Cold Brew &copy;</span><span>Nº 01 / Batch</span><span>Steeped slow</span></header>
+<main>
+<div class="hero" id="hero">
+ <div class="pour" aria-hidden="true"></div><div class="pour" aria-hidden="true"></div><div class="pour" aria-hidden="true"></div>
+ <h1 class="words" aria-label="Cold Brew, steeped slow"><span><i class="w1">Cold</i></span><span><i class="w2">Brew</i></span><span><i class="w3">Slow</i></span></h1>
+ <p class="script" aria-hidden="true">12 hrs</p>
+ <p class="lead">Steeped cold for twelve hours. No heat. No rush. Just the smooth part of coffee.</p>
+ <a class="cta" href="#find">Find a cup</a>
+</div>
+<div class="ticker" aria-hidden="true"><div>COLD BREW &middot; STEEPED SLOW &middot; NO HEAT &middot; NO RUSH &middot; COLD BREW &middot; STEEPED SLOW &middot; NO HEAT &middot; NO RUSH &middot; </div><div>COLD BREW &middot; STEEPED SLOW &middot; NO HEAT &middot; NO RUSH &middot; COLD BREW &middot; STEEPED SLOW &middot; NO HEAT &middot; NO RUSH &middot; </div></div>
+
+<section aria-labelledby="how"><h2 id="how" class="reveal">How it's made</h2>
+<ol class="steps">
+ <li class="reveal"><b>01</b><strong>Grind coarse</strong><p>Coarse grounds keep the cup smooth, not bitter.</p></li>
+ <li class="reveal"><b>02</b><strong>Steep cold</strong><p>Cold water and time, about twelve hours*. No heat at any point.</p></li>
+ <li class="reveal"><b>03</b><strong>Pour over ice</strong><p>Filter, pour, and serve over ice. Slow on purpose.</p></li>
+</ol></section>
+
+<section aria-labelledby="watch"><h2 id="watch" class="reveal">Watch it pour</h2>
+<div class="media">
+ <video controls playsinline preload="none" poster="../poster/poster.png" aria-label="Cold Brew motion ad, 10 seconds, with sound"><source src="../video/out/cold-brew-9x16.mp4" type="video/mp4"></video>
+ <img src="../poster/poster.png" width="1080" height="1350" alt="Poster: giant words COLD, BREW, SLOW in coffee browns with cold brew streams pouring through the letters and a red script note, 12 hrs." loading="lazy">
+</div></section>
+
+<section aria-labelledby="spec"><h2 id="spec" class="reveal">The spec</h2>
+<div class="label mono">
+ <div><span>Steeped</span><span>12 hours*</span></div>
+ <div><span>Net</span><span>350 ml*</span></div>
+ <div><span>Serve</span><span>Over ice</span></div>
+ <div><span>Price</span><span>Rp XX.XXX*</span></div>
+</div>
+<p class="note mono">* Placeholder. Confirm with brand.</p></section>
+
+<section id="find" aria-labelledby="fh"><h2 id="fh" class="reveal">Find a cup</h2>
+<p class="reveal">Address and opening hours to be announced. This is a demo page with placeholder brand details.</p></section>
+</main>
+<footer class="mono">&copy; Cold Brew (demo). Fonts: Archivo, DM Mono, Kaushan Script (SIL OFL). Motion: GSAP.</footer>
+<script>document.documentElement.classList.add('js')</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+ function show(){document.querySelectorAll('.reveal').forEach(function(e){e.style.opacity=1})}
+ if(!window.gsap||!window.ScrollTrigger||matchMedia('(prefers-reduced-motion: reduce)').matches){show();return}
+ gsap.registerPlugin(ScrollTrigger);
+ var tl=gsap.timeline({defaults:{ease:'expo.out'}});
+ tl.from('.words i',{yPercent:115,rotate:3,duration:1,stagger:.12},0.1)
+   .from('.pour',{scaleY:0,duration:1.4,ease:'power2.inOut',stagger:.2},0.5)
+   .from('.script',{clipPath:'inset(0 100% 0 0)',scale:1.12,duration:.9,ease:'power2.inOut'},1.6)
+   .from('.lead,.cta',{y:24,opacity:0,duration:.7,stagger:.1},1.8);
+ gsap.to('.pour',{yPercent:-6,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+ gsap.to('.words',{yPercent:-6,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+ gsap.utils.toArray('.reveal').forEach(function(e){gsap.fromTo(e,{opacity:0,y:36},{opacity:1,y:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:e,start:'top 88%'}})});
+ gsap.to('.ticker div',{xPercent:-100,ease:'none',repeat:-1,duration:18});
+})();
+</script></body></html>

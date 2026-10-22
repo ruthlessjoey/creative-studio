@@ -28,3 +28,10 @@ no `allowed-tools` or `hooks` declared. ui-ux-pro-max Python uses the standard l
 ## Rules
 - No paid API is a dependency. Examples in upstream docs that need keys are ignored.
 - Never commit secrets. Workflows use only the built-in `GITHUB_TOKEN`.
+
+
+## Fonts (assets/fonts, added for Cold Brew v2)
+Archivo, DM Mono, Kaushan Script: SIL Open Font License 1.1, from google/fonts (sparse clone). Instanced/subset to Basic Latin plus a few symbols and converted to WOFF. License texts: assets/fonts/OFL-*.txt.
+
+## GSAP 3.15.0
+Loaded from jsDelivr by the site and video pages; the render workflow installs the same version with npm. Not vendored. GSAP Standard No Charge license applies.

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1080">
+<title>Cold Brew - 9:16 motion ad</title>
+<style>
+@font-face{font-family:AB;src:url(../../../assets/fonts/archivo-black-wide.woff)}
+@font-face{font-family:AM;src:url(../../../assets/fonts/archivo-medium.woff)}
+@font-face{font-family:KS;src:url(../../../assets/fonts/kaushan.woff)}
+@font-face{font-family:DM;src:url(../../../assets/fonts/dmmono.woff)}
+html,body{margin:0;background:#111}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#EDE8DE;color:#2A160A;transform-origin:50% 45%}
+.abs{position:absolute}
+.mono{font-family:DM;font-size:22px;letter-spacing:1.5px;white-space:nowrap}
+.mask{position:absolute;left:70px;width:940px;height:196px;overflow:hidden}
+.row{display:block;font-family:AB;font-size:237px;line-height:196px;white-space:nowrap;transform-origin:0 100%}
+.fillr{position:absolute;left:0;top:0;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(#C9731F,#C9731F);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%}
+.stream{position:absolute;top:240px;height:0;background:linear-gradient(90deg,#7A3E0C,#C9731F 35%,#E39A3C 60%,#8F4A10);border-radius:0;clip-path:polygon(0 0,100% 0,100% 90%,85% 100%,15% 100%,0 90%)}
+.stream .tip{position:absolute;left:50%;bottom:0;border-radius:50%;background:linear-gradient(90deg,#7A3E0C,#C9731F 35%,#E39A3C 60%,#8F4A10);transform:translate(-50%,40%);opacity:0}
+.stream .hl{position:absolute;left:44%;top:0;bottom:0;width:5px;border-radius:3px;background:rgba(255,241,214,.55)}
+.drop{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF1D6 0 12%,#E39A3C 30%,#8F4A10);opacity:0}
+.rule{position:absolute;left:70px;width:940px;height:3px;background:#2A160A;transform-origin:0 50%}
+.script{position:absolute;left:520px;top:900px;font-family:KS;font-size:150px;color:#B0121C;white-space:nowrap;transform:rotate(-8deg);transform-origin:0 100%;clip-path:inset(-20% 100% -20% 0)}
+#grain{position:absolute;inset:-300px;background:url(grain.png);opacity:.55;pointer-events:none}
+.ft{position:absolute;left:70px;width:940px;display:flex;justify-content:space-between;white-space:nowrap}
+.big{font-family:AM;font-size:30px}
+#cap{left:70px;top:1500px;font-family:DM;font-size:26px;letter-spacing:2px}
+</style></head>
+<body><div id="stage"><div id="c" style="position:absolute;left:0;top:0;width:1080px;height:1920px;transform:translateY(80px)">
+ <div class="abs mono" style="left:70px;top:178px" id="h1">COLD BREW &copy;</div>
+ <div class="abs mono" style="left:0;width:1080px;text-align:center;top:178px" id="h2">N&ordm; 01 / BATCH</div>
+ <div class="abs mono" style="right:70px;top:178px" id="h3">STEEPED SLOW</div>
+ <div class="rule" id="r0" style="top:238px"></div>
+ <div id="streams"></div>
+ <div class="mask" style="top:560px"><span class="row" style="color:#2A160A">COLD</span></div>
+ <div class="mask" style="top:750px"><span class="row" style="color:#5B3220">BREW</span></div>
+ <div class="mask" style="top:940px"><span class="row" style="color:#9A7A58">SLOW<span class="fillr">SLOW</span></span></div>
+ <div id="drops"></div>
+ <div class="script" id="script">12 hrs</div>
+ <div class="rule" id="r1" style="top:1290px"></div>
+ <div class="ft big" id="f1" style="top:1316px"><span>STEEPED COLD, <b id="n" style="font-weight:inherit">00</b> HOURS*</span><span>NO HEAT. NO RUSH.</span></div>
+ <div class="rule" id="r2" style="top:1380px"></div>
+ <div class="ft mono" id="f2" style="top:1406px"><span>NET 350 ML*</span><span>SERVE OVER ICE</span><span>RP XX.XXX*</span></div>
+ <div class="rule" id="r3" style="top:1460px"></div>
+ <div class="abs mono" id="cap" style="opacity:0"></div>
+ </div>
+ <div id="grain"></div>
+</div>
+<script src="timing.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script>
+(async function(){
+const T=window.TIMING, $=s=>document.querySelector(s), stage=$('#stage');
+await document.fonts.ready; await Promise.all(['AB','AM','KS','DM'].map(f=>document.fonts.load('20px '+f)));
+// fit each word to 940px with tracking
+document.querySelectorAll('.row').forEach(r=>{const w0=r.getBoundingClientRect().width, n=r.firstChild.textContent.length; r.style.letterSpacing=((940-w0)/(n-1))+'px'; r.style.marginRight='-'+(((940-w0)/(n-1)))+'px';});
+const S=[{x:250,w:70,tip:1180},{x:600,w:60,tip:1040},{x:830,w:46,tip:900}];
+const sEl=[],tEl=[],dEl=[];
+S.forEach((s,i)=>{const d=document.createElement('div');d.className='stream';d.style.left=s.x+'px';d.style.width=s.w+'px';d.innerHTML='<div class="hl"></div><div class="tip" style="width:'+(s.w*1.18)+'px;height:'+(s.w*1.18)+'px"></div>';$('#streams').appendChild(d);sEl.push(d);tEl.push(d.querySelector('.tip'));
+ const dr=document.createElement('div');dr.className='drop';const z=[26,22,18][i];dr.style.width=dr.style.height=z+'px';dr.style.left=(s.x+s.w/2-z/2)+'px';dr.style.top='0px';$('#drops').appendChild(dr);dEl.push(dr);});
+const tl=gsap.timeline({paused:true,defaults:{overwrite:false}});
+// camera drift
+tl.fromTo(stage,{scale:1},{scale:1.035,duration:T.dur,ease:'none'},0);
+// header + rules
+tl.from(['#h1','#h2','#h3'],{y:24,opacity:0,duration:.5,ease:'power3.out',stagger:.08},0.05);
+tl.from('#r0',{scaleX:0,duration:.7,ease:'expo.out'},0.1);
+// words slam up from masks
+document.querySelectorAll('.row').forEach((r,i)=>tl.from(r,{yPercent:115,rotate:3,duration:.75,ease:'expo.out'},T.words[i]));
+// streams
+S.forEach((s,i)=>{const t0=T.streams[i], len=s.tip-240;
+ tl.set(tEl[i],{opacity:1},t0);
+ tl.to(sEl[i],{height:len,duration:1.25,ease:'power2.inOut'},t0);
+});
+// drips
+const lastDrop=[0,0,0];
+T.drips.forEach(([i,t])=>{const s=S[i], z=[26,22,18][i];
+ tl.to(tEl[i],{scale:1.3,duration:.45,ease:'sine.in',transformOrigin:'50% 0%'},t-.45);
+ tl.set(dEl[i],{y:s.tip+s.w*.55,opacity:1,scale:1},t);
+ tl.to(tEl[i],{scale:1,duration:.5,ease:'elastic.out(1,.4)'},t);
+ tl.to(dEl[i],{y:1270,duration:.85,ease:'power2.in'},t);
+ tl.to(dEl[i],{scale:.2,opacity:0,duration:.12,ease:'power1.out'},t+.85);});
+// script writes on
+tl.to('#script',{clipPath:'inset(-20% 0% -20% 0)',duration:.9,ease:'power2.inOut'},T.script);
+tl.fromTo('#script',{scale:1.12},{scale:1,duration:.9,ease:'power2.out'},T.script);
+// SLOW fills with cold brew
+tl.to('.fillr',{backgroundSize:'100% 100%',duration:T.fill[1]-T.fill[0],ease:'sine.inOut'},T.fill[0]);
+// footer
+['#r1','#r2','#r3'].forEach((r,i)=>tl.from(r,{scaleX:0,duration:.6,ease:'expo.out'},T.footer[i]-.1));
+tl.from('#f1',{y:30,opacity:0,duration:.5,ease:'power3.out'},T.footer[0]);
+tl.from('#f2',{y:30,opacity:0,duration:.5,ease:'power3.out'},T.footer[1]);
+const cnt={v:0};tl.to(cnt,{v:12,duration:T.counter[1]-T.counter[0],ease:'power2.out',onUpdate:()=>{$('#n').textContent=String(Math.round(cnt.v)).padStart(2,'0')}},T.counter[0]);
+// captions (timed text, also serve as burned-in subtitles)
+const caps=[[0.5,'cold.'],[1.4,'brewed slow.'],[3.5,'twelve hours.'],[6.7,'no heat. no rush.'],[8.6,'cold brew.']];
+caps.forEach(([t,txt],i)=>{const end=i<caps.length-1?caps[i+1][0]-.05:T.dur;
+ tl.call(()=>{$('#cap').textContent=txt},null,t);tl.fromTo('#cap',{opacity:0,y:10},{opacity:1,y:0,duration:.25,ease:'power2.out'},t);});
+// end beat: little scale pulse on ding
+tl.fromTo('#script',{rotate:-8},{rotate:-7,duration:.12,yoyo:true,repeat:1,ease:'sine.inOut'},T.ding);
+window.renderFrame=function(t){tl.time(t,false);
+ // viscous wobble on streams (deterministic)
+ sEl.forEach((e,i)=>gsap.set(e,{scaleX:1+0.035*Math.sin(t*3.1+i*1.7)}));
+ const j=Math.floor(t*12);$('#grain').style.transform='translate('+((j*53)%300-150)+'px,'+((j*97)%300-150)+'px)';
+ if(!$('#cap').textContent)$('#cap').textContent='';
+};
+window.renderFrame(0);window.__ready=true;
+if(!/render=1/.test(location.search)){let st=performance.now();(function loop(){window.renderFrame(((performance.now()-st)/1000)%T.dur);requestAnimationFrame(loop)})();}
+})();
+</script></body></html>

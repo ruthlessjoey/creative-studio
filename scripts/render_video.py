@@ -87,6 +87,14 @@ def synth_audio(path):
         w.writeframes(b''.join(struct.pack('<h', int(max(-1, min(1, v*scale)) * 32767)) for v in buf))
 
 
+def find_gsap(root):
+    """Local GSAP build so rendering is deterministic and works offline: $GSAP_DIR, else node_modules/gsap/dist."""
+    for c in (os.environ.get('GSAP_DIR'), str(root / 'node_modules' / 'gsap' / 'dist')):
+        if c and (Path(c) / 'gsap.min.js').exists():
+            return Path(c)
+    return None
+
+
 def run(cmd, **kw):
     return subprocess.run(cmd, check=True, **kw)
 
@@ -106,8 +114,19 @@ def main():
     mp4 = out_dir / f'{name}-9x16.mp4'
     frames_dir = out_dir  # nothing is written per frame; frames are piped
 
+    global DUR, FPS
+    tj = vdir / 'timing.js'
+    if tj.exists():  # project-defined timing + soundtrack
+        t = json.loads(tj.read_text()[tj.read_text().index('{'):tj.read_text().rindex('}') + 1])
+        DUR, FPS = float(t['dur']), int(t['fps'])
     print('1/3 synthesizing audio...', flush=True)
-    synth_audio(wav)
+    if (vdir / 'audio.py').exists():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('project_audio', vdir / 'audio.py')
+        mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+        mod.synth(wav, SR)
+    else:
+        synth_audio(wav)
 
     narr = None
     for ext in ('m4a', 'mp3', 'wav'):
@@ -130,18 +149,23 @@ def main():
                 '-map', '0:v', '-map', '[a]']
     else:
         cmd += ['-filter_complex', '[1:a]alimiter=limit=0.95[a]', '-map', '0:v', '-map', '[a]']
-    cmd += ['-t', str(DUR), '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p',
+    cmd += ['-t', str(DUR), '-c:v', 'libx264', '-preset', 'slow', '-crf', '26', '-pix_fmt', 'yuv420p',
             '-c:a', 'aac', '-b:a', '160k', '-ac', '2', '-movflags', '+faststart', str(mp4)]
     ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={'width': W, 'height': H})
+        gdir = find_gsap(root)
+        if gdir:
+            page.route(re.compile(r'.*/(gsap|ScrollTrigger)\.min\.js'),
+                       lambda r: r.fulfill(path=str(gdir / r.request.url.rsplit('/', 1)[1]), content_type='application/javascript'))
+            print('   GSAP from', gdir)
         page.goto(html.as_uri() + '?render=1')
-        page.wait_for_function('typeof window.renderFrame === "function"')
+        page.wait_for_function('typeof window.renderFrame === "function"', timeout=30000)
         page.evaluate('document.fonts.ready')
         for i in range(total):
             page.evaluate(f'window.renderFrame({i / FPS})')
-            ff.stdin.write(page.screenshot(type='png'))
+            ff.stdin.write(page.screenshot(type='jpeg', quality=95))
         browser.close()
     ff.stdin.close()
     if ff.wait() != 0:
