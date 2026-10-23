@@ -313,3 +313,7 @@ Select ONE archetype per project. Apply consistently.
 - [state-feedback.md](patterns/state-feedback.md) — Success, error, loading, hover
 - [ambient-continuous.md](patterns/ambient-continuous.md) — Looping, breathing, parallax
 - [multi-element.md](patterns/multi-element.md) — Stagger + choreography recipes
+
+
+## Using this skill with HyperFrames (added)
+For rendered video, express every motion as a seekable GSAP tween on one paused timeline (see `.claude/skills/hyperframes/references/motion.md`). Use this skill for the decisions (timing, easing, choreography), HyperFrames for the format. Use `fromTo` inside scenes, no `repeat: -1`, no wall-clock.

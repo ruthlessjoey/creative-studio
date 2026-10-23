@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-composition-variables='[{"id":"product","type":"string","label":"Product photo (root-relative path)","default":"assets/product/iced-matcha.jpg"}]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face{font-family:"Mrs Saint Delafield";src:url("assets/fonts/mrs-saint-delafield.woff") format("woff");font-weight:400}
+:root{--ground:#07110d;--cream:#ece6d2;--sage:#b9c98f;--leaf:#6f8a3a;--serif:"Playfair Display",serif;--sans:"Montserrat",sans-serif;--hand:"Mrs Saint Delafield",cursive}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
+#root{position:absolute;inset:0;width:1080px;height:1920px;overflow:hidden;background:var(--ground);color:var(--cream)}
+.scene{position:absolute;inset:0;width:1080px;height:1920px;overflow:hidden}
+.fade{position:absolute;inset:0}
+.ph{position:absolute;inset:0;overflow:hidden}
+.ph img{position:absolute;left:0;top:0;width:1170px;height:1170px;max-width:none;transform-origin:0 0}
+.shade{position:absolute;inset:0}
+.txt{position:absolute;color:var(--cream)}
+.serif{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:.02em;text-transform:uppercase}
+.sans{font-family:var(--sans);font-weight:500;letter-spacing:.26em;text-transform:uppercase}
+.hand{font-family:var(--hand);font-weight:400;line-height:.92;color:var(--cream)}
+.line{display:block;white-space:nowrap}
+.rule{display:block;height:3px;background:var(--cream);transform-origin:0 50%}
+#grain{position:absolute;inset:0;overflow:hidden;z-index:30;pointer-events:none}
+#grain .gr{position:absolute;left:-300px;top:-300px;width:1700px;height:2500px;background:url("assets/overlays/grain.png");opacity:.55}
+.leak{position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,170,70,0) 20%,rgba(255,190,90,.55) 48%,rgba(255,170,70,0) 72%);mix-blend-mode:screen;opacity:0}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:#d9893a;margin-right:22px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+
+<!-- Sound: placeholder foley (synthesized). Swap assets/audio/foley.wav for real recordings. -->
+<audio id="foley" src="assets/audio/foley.wav" data-start="0" data-duration="10" data-track-index="9" data-volume="1"></audio>
+
+<!-- 01 OPENING 0.0-1.0 -->
+<div id="s1" class="scene clip" data-start="0" data-duration="1.15" data-track-index="1" style="z-index:1"><div class="fade" id="s1-fade">
+  <div class="ph"><img id="s1-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Iced matcha latte in a fluted glass with ice, in hard sunlight" /></div>
+  <div class="shade" style="background:linear-gradient(180deg,rgba(5,12,9,.62) 0%,rgba(5,12,9,0) 38%)"></div>
+  <div class="txt" id="s1-txt" style="left:90px;top:230px">
+    <span class="line serif" id="s1-a" style="font-size:118px">Iced</span>
+    <span class="line serif" id="s1-b" style="font-size:118px">Matcha</span>
+    <span class="line sans" id="s1-c" style="font-size:28px;letter-spacing:.18em;margin-top:26px;line-height:1.8">Pure energy.<br/>Real ingredients.</span>
+  </div></div></div>
+
+<!-- 02 DETAILS / ICE 1.0-2.0 -->
+<div id="s2" class="scene clip" data-start="1.0" data-duration="1.15" data-track-index="2" style="z-index:2"><div class="fade" id="s2-fade">
+  <div class="ph"><img id="s2-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Close crop of the ice and matcha foam" /></div>
+  <div class="shade" style="background:linear-gradient(180deg,rgba(5,12,9,.55) 0%,rgba(5,12,9,0) 40%)"></div>
+  <div class="txt hand" id="s2-txt" style="left:90px;top:250px;font-size:150px;transform-origin:0 50%"><span class="line">Real</span><span class="line" style="margin-left:56px">Matcha</span></div>
+  </div></div>
+
+<!-- 03 POUR / MIX 2.0-3.0 (marbling crop; no pour photo supplied) -->
+<div id="s3" class="scene clip" data-start="2.0" data-duration="1.15" data-track-index="3" style="z-index:3"><div class="fade" id="s3-fade">
+  <div class="ph"><img id="s3-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Close crop of the matcha and milk marbling" /></div>
+  <div class="shade" style="background:linear-gradient(270deg,rgba(5,12,9,.6) 0%,rgba(5,12,9,0) 55%)"></div>
+  <div class="txt sans" id="s3-txt" style="right:80px;top:560px;text-align:right;font-size:28px;line-height:1.7">
+    <span class="line" id="s3-a">Japanese</span><span class="line" id="s3-b">Matcha</span><span class="line" id="s3-c">+</span><span class="line" id="s3-d">Fresh</span><span class="line" id="s3-e">Milk</span></div>
+  </div></div>
+
+<!-- 04 TEXTURE / LAYERS 3.0-4.0 -->
+<div id="s4" class="scene clip" data-start="3.0" data-duration="1.15" data-track-index="4" style="z-index:4"><div class="fade" id="s4-fade">
+  <div class="ph"><img id="s4-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Close crop of the fluted glass and milk layer" /></div>
+  <div class="shade" style="background:linear-gradient(90deg,rgba(5,12,9,.78) 0%,rgba(5,12,9,0) 62%)"></div>
+  <div class="txt" id="s4-txt" style="left:80px;top:700px">
+    <span class="line serif" id="s4-a" style="font-size:84px">Clean</span><span class="line serif" id="s4-b" style="font-size:84px">Ingredients.</span><span class="line serif" id="s4-c" style="font-size:84px">Pure energy.</span>
+    <span class="rule" id="s4-r" style="width:120px;margin-top:34px"></span></div>
+  </div></div>
+
+<!-- 05 LIFESTYLE / ENVIRONMENT 4.0-5.0 -->
+<div id="s5" class="scene clip" data-start="4.0" data-duration="1.15" data-track-index="5" style="z-index:5"><div class="fade" id="s5-fade">
+  <div class="ph"><img id="s5-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Wide view of the glass in a sun and shadow corner" /></div>
+  <div class="leak" id="s5-leak"></div>
+  <div class="txt hand" id="s5-txt" style="right:70px;top:330px;font-size:132px;text-align:right"><span class="line">Good</span><span class="line">Matcha</span><span class="line">Good</span><span class="line">Days</span></div>
+  </div></div>
+
+<!-- 06 SURFACE (no top-down photo supplied: ice-surface crop with slow rotation) 5.0-6.0 -->
+<div id="s6" class="scene clip" data-start="5.0" data-duration="1.15" data-track-index="6" style="z-index:6"><div class="fade" id="s6-fade">
+  <div class="ph"><img id="s6-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Crop of the ice and foam surface" /></div>
+  <div class="shade" style="background:linear-gradient(270deg,rgba(5,12,9,.7) 0%,rgba(5,12,9,0) 60%)"></div>
+  <div class="txt sans" id="s6-txt" style="right:80px;top:700px;font-size:32px;line-height:2.1;text-align:right">
+    <span class="line" id="s6-a">Rich</span><span class="line" id="s6-b"><i class="dot"></i>Smooth</span><span class="line" id="s6-c">Refreshing</span></div>
+  </div></div>
+
+<!-- 07 FINAL HERO 6.0-7.0 -->
+<div id="s7" class="scene clip" data-start="6.0" data-duration="1.15" data-track-index="7" style="z-index:7"><div class="fade" id="s7-fade">
+  <div class="ph"><img id="s7-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Hero close crop of the ice and matcha foam" /></div>
+  <div class="shade" style="background:linear-gradient(180deg,rgba(5,12,9,.7) 0%,rgba(5,12,9,0) 48%)"></div>
+  <div class="txt" id="s7-txt" style="left:80px;top:230px;transform-origin:0 0">
+    <span class="line serif" style="font-size:150px">Iced</span><span class="line serif" style="font-size:150px">Matcha</span>
+    <span class="line sans" id="s7-sub" style="font-size:28px;letter-spacing:.18em;margin-top:28px;line-height:1.8">Pure energy.<br/>Real ingredients.</span></div>
+  </div></div>
+
+<!-- 08 END / CTA 7.0-8.0 -->
+<div id="s8" class="scene clip" data-start="7.0" data-duration="1.15" data-track-index="8" style="z-index:8"><div class="fade" id="s8-fade">
+  <div class="ph"><img id="s8-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Slow pull back from the glass" /></div>
+  <div class="txt hand" id="s8-txt" style="right:70px;top:330px;font-size:132px;text-align:right"><span class="line">Good</span><span class="line">Matcha</span><span class="line">Good</span><span class="line">Days</span></div>
+  </div></div>
+
+<!-- 09 BRAND END CARD 8.0-10.0 (wall texture and shadow from the same photo, darkened) -->
+<div id="s9" class="scene clip" data-start="8.0" data-duration="2" data-track-index="10" style="z-index:9"><div class="fade" id="s9-fade">
+  <div class="ph"><img id="s9-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Wall texture and diagonal shadow from the photograph" /></div>
+  <div class="shade" style="background:rgba(4,12,8,.66)"></div>
+  <div class="txt" id="s9-txt" style="left:0;width:1080px;top:820px;text-align:center">
+    <span class="line serif" id="s9-a" style="font-size:78px;letter-spacing:.2em;text-indent:.2em">Iced Matcha</span>
+    <span class="line sans" id="s9-b" style="font-size:28px;letter-spacing:.16em;margin-top:34px;text-indent:.16em">Pure energy. Real ingredients.</span>
+    <span class="rule" id="s9-r" style="width:110px;margin:46px auto 0"></span></div>
+  </div></div>
+
+<div id="grain" class="clip" data-start="0" data-duration="10" data-track-index="11"><div class="gr" id="gr"></div></div>
+</div>
+
+<script>
+(function(){
+  var tl = gsap.timeline({ paused: true });
+  // crop(L,T,W): photo region of width W (9:16) placed full-frame. Returns transform values, origin 0 0.
+  function crop(L,T,W,rot){ var s = 1080 / W; return { x: -L*s, y: -T*s, scale: s, rotation: rot||0, transformOrigin: "0 0" }; }
+  function cam(id, a, b, start, dur, ease){ tl.fromTo(id, a, Object.assign({}, b, { duration: dur, ease: ease || "none" }), start); }
+  function fade(id, start){ tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.16, ease: "power1.out" }, start); }
+  function rise(sel, start, dur, dy, stag){ tl.fromTo(sel, { opacity: 0, y: dy || 26 }, { opacity: 1, y: 0, duration: dur || 0.5, ease: "power3.out", stagger: stag || 0 }, start); }
+  function write(sel, start, dur){ tl.fromTo(sel, { clipPath: "inset(-10% 100% -10% 0)" }, { clipPath: "inset(-10% -5% -10% 0)", duration: dur || 0.7, ease: "power2.inOut" }, start); }
+
+  // 01 opening: slow push-in
+  cam("#s1-img", crop(262,14,646), crop(318,236,534), 0, 1.15);
+  tl.fromTo(["#s1-a","#s1-b"], { y: 16 }, { y: 0, duration: .7, ease: "power3.out", stagger: .08 }, 0);
+  rise("#s1-c", 0.15, .6, 14);
+  // 02 ice detail: extreme close, slow pan across the ice
+  fade("#s2-fade", 1.0);
+  cam("#s2-img", crop(392,440,360), crop(452,452,330), 1.0, 1.15);
+  write("#s2-txt", 1.2, .8);
+  // 03 marbling crop, slow upward drift, typewriter keywords
+  fade("#s3-fade", 2.0);
+  cam("#s3-img", crop(404,560,350), crop(420,520,330), 2.0, 1.15);
+  ["#s3-a","#s3-b","#s3-c","#s3-d","#s3-e"].forEach(function(s,i){ tl.fromTo(s, { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: .22, ease: "steps(8)" }, 2.2 + i*.12); });
+  // 04 fluted base, vertical pan, statement slides in
+  fade("#s4-fade", 3.0);
+  cam("#s4-img", crop(392,610,300), crop(396,560,284), 3.0, 1.15);
+  tl.fromTo(["#s4-a","#s4-b","#s4-c"], { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: .55, ease: "power3.out", stagger: .1 }, 3.15);
+  tl.fromTo("#s4-r", { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "power2.out" }, 3.6);
+  // 05 wide, slow push-in, light leak, handwritten line
+  fade("#s5-fade", 4.0);
+  cam("#s5-img", crop(255,12,656), crop(285,70,600), 4.0, 1.15);
+  tl.fromTo("#s5-leak", { opacity: 0, x: -500 }, { opacity: 1, x: 500, duration: 1.15, ease: "sine.inOut" }, 4.0);
+  write("#s5-txt", 4.25, .8);
+  // 06 surface crop, slow rotation, keywords line by line
+  fade("#s6-fade", 5.0);
+  cam("#s6-img", crop(380,420,380,-2), crop(400,430,340,2), 5.0, 1.15);
+  tl.fromTo(["#s6-a","#s6-b","#s6-c"], { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: .45, ease: "power3.out", stagger: .16 }, 5.2);
+  // 07 hero: push into the ice, title scale-in
+  fade("#s7-fade", 6.0);
+  cam("#s7-img", crop(372,392,420), crop(418,448,330), 6.0, 1.15);
+  tl.fromTo("#s7-txt", { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: .6, ease: "power3.out" }, 6.1);
+  rise("#s7-sub", 6.4, .5, 16);
+  // 08 pull back
+  fade("#s8-fade", 7.0);
+  cam("#s8-img", crop(300,110,540), crop(255,12,656), 7.0, 1.15);
+  write("#s8-txt", 7.2, .75);
+  // 09 brand end card
+  fade("#s9-fade", 8.0);
+  cam("#s9-img", crop(790,0,380), crop(800,0,360), 8.0, 2.0);
+  rise("#s9-a", 8.05, .7, 18); rise("#s9-b", 8.35, .6, 14);
+  tl.fromTo("#s9-r", { scaleX: 0 }, { scaleX: 1, duration: .6, ease: "power2.out" }, 8.8);
+  // film grain: deterministic 12 fps jitter (no random)
+  for (var i = 0; i < 120; i++) tl.set("#gr", { x: -((i*83) % 260), y: -((i*131) % 260) }, i / 12);
+  window.__timelines = window.__timelines || {};
+  window.__timelines["main"] = tl;
+})();
+</script>
+</body></html>
