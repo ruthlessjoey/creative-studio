@@ -40,7 +40,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
   <div class="txt" id="s1-txt" style="left:90px;top:230px">
     <span class="line serif" id="s1-a" style="font-size:118px">Iced</span>
     <span class="line serif" id="s1-b" style="font-size:118px">Matcha</span>
-    <span class="line sans" id="s1-c" style="font-size:22px;margin-top:26px;line-height:1.9">Pure energy.<br/>Real ingredients.</span>
+    <span class="line sans" id="s1-c" style="font-size:28px;letter-spacing:.18em;margin-top:26px;line-height:1.8">Pure energy.<br/>Real ingredients.</span>
   </div></div></div>
 
 <!-- 02 DETAILS / ICE 1.0-2.0 -->
@@ -54,7 +54,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
 <div id="s3" class="scene clip" data-start="2.0" data-duration="1.15" data-track-index="3" style="z-index:3"><div class="fade" id="s3-fade">
   <div class="ph"><img id="s3-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Close crop of the matcha and milk marbling" /></div>
   <div class="shade" style="background:linear-gradient(270deg,rgba(5,12,9,.6) 0%,rgba(5,12,9,0) 55%)"></div>
-  <div class="txt sans" id="s3-txt" style="right:80px;top:560px;text-align:right;font-size:26px;line-height:1.75">
+  <div class="txt sans" id="s3-txt" style="right:80px;top:560px;text-align:right;font-size:28px;line-height:1.7">
     <span class="line" id="s3-a">Japanese</span><span class="line" id="s3-b">Matcha</span><span class="line" id="s3-c">+</span><span class="line" id="s3-d">Fresh</span><span class="line" id="s3-e">Milk</span></div>
   </div></div>
 
@@ -88,7 +88,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
   <div class="shade" style="background:linear-gradient(180deg,rgba(5,12,9,.7) 0%,rgba(5,12,9,0) 48%)"></div>
   <div class="txt" id="s7-txt" style="left:80px;top:230px;transform-origin:0 0">
     <span class="line serif" style="font-size:150px">Iced</span><span class="line serif" style="font-size:150px">Matcha</span>
-    <span class="line sans" id="s7-sub" style="font-size:22px;margin-top:28px;line-height:1.9">Pure energy.<br/>Real ingredients.</span></div>
+    <span class="line sans" id="s7-sub" style="font-size:28px;letter-spacing:.18em;margin-top:28px;line-height:1.8">Pure energy.<br/>Real ingredients.</span></div>
   </div></div>
 
 <!-- 08 END / CTA 7.0-8.0 -->
@@ -103,7 +103,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
   <div class="shade" style="background:rgba(4,12,8,.66)"></div>
   <div class="txt" id="s9-txt" style="left:0;width:1080px;top:820px;text-align:center">
     <span class="line serif" id="s9-a" style="font-size:78px;letter-spacing:.2em;text-indent:.2em">Iced Matcha</span>
-    <span class="line sans" id="s9-b" style="font-size:20px;margin-top:34px;text-indent:.26em">Pure energy. Real ingredients.</span>
+    <span class="line sans" id="s9-b" style="font-size:28px;letter-spacing:.16em;margin-top:34px;text-indent:.16em">Pure energy. Real ingredients.</span>
     <span class="rule" id="s9-r" style="width:110px;margin:46px auto 0"></span></div>
   </div></div>
 
@@ -158,8 +158,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
   // 09 brand end card
   fade("#s9-fade", 8.0);
   cam("#s9-img", crop(790,0,380), crop(800,0,360), 8.0, 2.0);
-  rise("#s9-a", 8.25, .8, 18); rise("#s9-b", 8.6, .7, 14);
-  tl.fromTo("#s9-r", { scaleX: 0 }, { scaleX: 1, duration: .6, ease: "power2.out" }, 9.0);
+  rise("#s9-a", 8.05, .7, 18); rise("#s9-b", 8.35, .6, 14);
+  tl.fromTo("#s9-r", { scaleX: 0 }, { scaleX: 1, duration: .6, ease: "power2.out" }, 8.8);
   // film grain: deterministic 12 fps jitter (no random)
   for (var i = 0; i < 120; i++) tl.set("#gr", { x: -((i*83) % 260), y: -((i*131) % 260) }, i / 12);
   window.__timelines = window.__timelines || {};

@@ -82,7 +82,7 @@ jobs:
 
       - name: Make a phone-friendly share copy (the delivery render is too big for git)
         run: |
-          ffmpeg -y -v error -i "projects/$PROJECT/out/$PROJECT-9x16.mp4" -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart "projects/$PROJECT/out/$PROJECT-9x16-share.mp4"
+          ffmpeg -y -v error -i "projects/$PROJECT/out/$PROJECT-9x16.mp4" -c:v libx264 -crf 27 -preset slow -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart "projects/$PROJECT/out/$PROJECT-9x16-share.mp4"
           ls -la "projects/$PROJECT/out"
 
       - uses: actions/upload-artifact@v4
