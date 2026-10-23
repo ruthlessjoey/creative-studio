@@ -16,7 +16,7 @@
     {
       "name": "CPU",
       "ok": true,
-      "detail": "4 cores · AMD EPYC 7763 64-Core Processor"
+      "detail": "4 cores · Intel(R) Xeon(R) 6973P-C @ 4099MHz"
     },
     {
       "name": "Memory",
@@ -26,12 +26,12 @@
     {
       "name": "Disk",
       "ok": true,
-      "detail": "84.9 GB free"
+      "detail": "84.7 GB free"
     },
     {
       "name": "Frames cache",
       "ok": true,
-      "detail": "/tmp/hyperframes-extract-cache-1001 · 84.9 GB free at /tmp · default"
+      "detail": "/tmp/hyperframes-extract-cache-1001 · 84.7 GB free at /tmp · default"
     },
     {
       "name": "Archive extractor",

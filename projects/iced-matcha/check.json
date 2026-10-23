@@ -1156,9 +1156,9 @@
         "sourceFile": "index.html",
         "bbox": {
           "x": 90,
-          "y": 510.77,
-          "width": 324.88,
-          "height": 68.79999999999995
+          "y": 511.77,
+          "width": 375.41,
+          "height": 84.38999999999999
         },
         "time": 0.273,
         "words": 4,
@@ -1175,9 +1175,9 @@
         "sourceFile": "index.html",
         "bbox": {
           "x": 80,
-          "y": 584.08,
-          "width": 325.36,
-          "height": 68.89999999999998
+          "y": 585.09,
+          "width": 375.97,
+          "height": 84.50999999999999
         },
         "time": 6.5,
         "words": 4,
@@ -1187,68 +1187,40 @@
       {
         "code": "line_unread",
         "severity": "warning",
-        "message": "The film's last line \"Iced Matcha\" (2 words) is on screen 1.60 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "message": "The film's last line \"Iced Matcha\" (2 words) is on screen 1.83 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
         "text": "Iced Matcha",
         "selector": "#s9-a",
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
           "x": 198.86,
-          "y": 812.02,
+          "y": 813.34,
           "width": 697.87,
           "height": 104
         },
-        "time": 8.406,
+        "time": 8.172,
         "words": 2,
-        "seconds": 1.598,
+        "seconds": 1.832,
         "floorSeconds": 2
       },
       {
-        "code": "text_below_floor",
+        "code": "line_unread",
         "severity": "warning",
-        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"Pure energy. Real ingredients.\" at 20 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "message": "The film's last line \"Pure energy. Real ingredients.\" (4 words) is on screen 1.54 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
         "text": "Pure energy. Real ingredients.",
         "selector": "#s9-b",
         "dataAttributes": {},
         "sourceFile": "index.html",
         "bbox": {
-          "x": 281.86,
-          "y": 941.12,
-          "width": 521.47,
-          "height": 24
+          "x": 219.2,
+          "y": 939.54,
+          "width": 646.0699999999999,
+          "height": 34
         },
-        "time": 8.75,
-        "times": [
-          0.375,
-          6.5,
-          8.75
-        ],
-        "fontPx": 20,
-        "floorPx": 28,
-        "seconds": 1.25,
-        "elements": [
-          {
-            "selector": "#s9-b",
-            "text": "Pure energy. Real ingredients.",
-            "fontPx": 20,
-            "time": 8.75,
-            "seconds": 1.25
-          },
-          {
-            "selector": "#s1-c",
-            "text": "Pure energy.Real ingredients.",
-            "fontPx": 22,
-            "time": 0.375,
-            "seconds": 0.875
-          },
-          {
-            "selector": "#s7-sub",
-            "text": "Pure energy.Real ingredients.",
-            "fontPx": 22,
-            "time": 6.5,
-            "seconds": 0.75
-          }
-        ]
+        "time": 8.469,
+        "words": 4,
+        "seconds": 1.535,
+        "floorSeconds": 2
       }
     ],
     "enabled": true,
@@ -1262,11 +1234,11 @@
   "snapshots": {
     "enabled": true,
     "files": [
-      ".hyperframes/artifacts/snapshots/7a5c6f68-aa29-465f-a8a3-65c87ee7f303/frame-00-at-0.6s.png",
-      ".hyperframes/artifacts/snapshots/7a5c6f68-aa29-465f-a8a3-65c87ee7f303/frame-01-at-2.8s.png",
-      ".hyperframes/artifacts/snapshots/7a5c6f68-aa29-465f-a8a3-65c87ee7f303/frame-02-at-5.0s.png",
-      ".hyperframes/artifacts/snapshots/7a5c6f68-aa29-465f-a8a3-65c87ee7f303/frame-03-at-7.2s.png",
-      ".hyperframes/artifacts/snapshots/7a5c6f68-aa29-465f-a8a3-65c87ee7f303/frame-04-at-9.4s.png"
+      ".hyperframes/artifacts/snapshots/dc6477bd-7ea3-4b61-b466-96ffdb124a96/frame-00-at-0.6s.png",
+      ".hyperframes/artifacts/snapshots/dc6477bd-7ea3-4b61-b466-96ffdb124a96/frame-01-at-2.8s.png",
+      ".hyperframes/artifacts/snapshots/dc6477bd-7ea3-4b61-b466-96ffdb124a96/frame-02-at-5.0s.png",
+      ".hyperframes/artifacts/snapshots/dc6477bd-7ea3-4b61-b466-96ffdb124a96/frame-03-at-7.2s.png",
+      ".hyperframes/artifacts/snapshots/dc6477bd-7ea3-4b61-b466-96ffdb124a96/frame-04-at-9.4s.png"
     ],
     "times": [
       0.556,
@@ -1278,9 +1250,9 @@
     "findingFiles": []
   },
   "saved": {
-    "id": "161f664d-40d8-461b-8c97-14ecd6b9e6de",
+    "id": "40e30d71-8a4c-46c3-a852-8c95df635ab8",
     "revision": null,
-    "report": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/.hyperframes/artifacts/checks/161f664d-40d8-461b-8c97-14ecd6b9e6de.json",
+    "report": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/.hyperframes/artifacts/checks/40e30d71-8a4c-46c3-a852-8c95df635ab8.json",
     "attribution": "unversioned"
   },
   "_meta": {
