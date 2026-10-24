@@ -41,4 +41,4 @@ Loaded from jsDelivr by the site and video pages; the render workflow installs t
 Apache-2.0, github.com/heygen-com/hyperframes, pinned commit 4371981b (docs read) and CLI hyperframes@0.8.185 (used by the workflow through npx). Skills `hyperframes` and `hyperframes-cli` vendored under .claude/skills/ (scripts excluded; license .claude/skills/HYPERFRAMES-LICENSE). Telemetry disabled in CI (HYPERFRAMES_NO_TELEMETRY=1).
 
 ## Fonts (iced-matcha)
-Mrs Saint Delafield: SIL OFL 1.1 (google/fonts), subset to Basic Latin, WOFF, in projects/iced-matcha/hyperframes/assets/fonts. Playfair Display and Montserrat are bundled with HyperFrames and referenced by name.
+Mrs Saint Delafield: SIL OFL 1.1 (google/fonts), subset to Basic Latin, WOFF, in projects/iced-matcha/hyperframes/assets/fonts. Playfair Display and Montserrat are bundled with HyperFrames and referenced by name. Scene 1 title also uses the unmodified Playfair Display variable font (SIL OFL 1.1, google/fonts `ofl/playfairdisplay/PlayfairDisplay[wght].ttf`) shipped as `assets/fonts/PlayfairDisplay-Variable.ttf` with its `OFL-PlayfairDisplay.txt`, selected at weight 800 via the CSS family alias "Playfair Title".

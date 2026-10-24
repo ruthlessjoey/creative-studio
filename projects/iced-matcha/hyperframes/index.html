@@ -25,6 +25,15 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
 #grain .gr{position:absolute;left:-300px;top:-300px;width:1700px;height:2500px;background:url("assets/overlays/grain.png");opacity:.55}
 .leak{position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,170,70,0) 20%,rgba(255,190,90,.55) 48%,rgba(255,170,70,0) 72%);mix-blend-mode:screen;opacity:0}
 .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:#d9893a;margin-right:22px;vertical-align:middle}
+@font-face{font-family:"Playfair Title";src:url("assets/fonts/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
+/* Scene 1 only: dimensional title in CSS 3D. Every rule below is scoped to #s1. */
+#s1-stage{position:absolute;inset:0;perspective:1400px;perspective-origin:50% 50%}
+#s1 .ph{transform:translateZ(-200px) scale(1.19)}
+#s1 .w3d{position:absolute;transform-style:preserve-3d;transform-origin:50% 50%;font-family:"Playfair Title",serif;font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+#s1 .w3d .sizer{visibility:hidden}
+#s1 .w3d .ex,#s1 .w3d .shadow,#s1 .w3d .key,#s1 .w3d .face{position:absolute;left:0;top:0;white-space:nowrap}
+#s1 .w3d .key{color:#16280e;-webkit-text-stroke:2.4px #16280e}
+#s1 .w3d .face{background:linear-gradient(105deg,rgba(255,253,240,0) 44%,rgba(255,253,240,.92) 50%,rgba(255,253,240,0) 56%) 0% 0%/300% 100% no-repeat,linear-gradient(215deg,#f8f1d8 0%,#eadfc0 50%,#d0c6a0 100%) 0 0/100% 100% no-repeat;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 </style>
 </head>
 <body>
@@ -33,15 +42,15 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
 <!-- Sound: placeholder foley (synthesized). Swap assets/audio/foley.wav for real recordings. -->
 <audio id="foley" src="assets/audio/foley.wav" data-start="0" data-duration="10" data-track-index="9" data-volume="1"></audio>
 
-<!-- 01 OPENING 0.0-1.0 -->
+<!-- 01 OPENING 0.0-1.15: dimensional title (CSS 3D). Title layers are built by extrude() in the script. -->
 <div id="s1" class="scene clip" data-start="0" data-duration="1.15" data-track-index="1" style="z-index:1"><div class="fade" id="s1-fade">
-  <div class="ph"><img id="s1-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Iced matcha latte in a fluted glass with ice, in hard sunlight" /></div>
-  <div class="shade" style="background:linear-gradient(180deg,rgba(5,12,9,.62) 0%,rgba(5,12,9,0) 38%)"></div>
-  <div class="txt" id="s1-txt" style="left:90px;top:230px">
-    <span class="line serif" id="s1-a" style="font-size:118px">Iced</span>
-    <span class="line serif" id="s1-b" style="font-size:118px">Matcha</span>
-    <span class="line sans" id="s1-c" style="font-size:28px;letter-spacing:.18em;margin-top:26px;line-height:1.8">Pure energy.<br/>Real ingredients.</span>
-  </div></div></div>
+  <div id="s1-stage">
+    <div class="ph"><img id="s1-img" data-var-src="product" src="assets/product/iced-matcha.jpg" alt="Iced matcha latte in a fluted glass with ice, in hard sunlight" /><div class="shade" style="background:linear-gradient(180deg,rgba(5,12,9,.66) 0%,rgba(5,12,9,.30) 30%,rgba(5,12,9,0) 46%)"></div></div>
+    <div class="w3d" id="s1-w1" style="left:109px;top:152px;font-size:110px;letter-spacing:.28em"><span class="sizer">Iced</span></div>
+    <div class="w3d" id="s1-w2" style="left:77px;top:247px;font-size:189px"><span class="sizer">Matcha</span></div>
+  </div>
+  <div class="txt sans" id="s1-c" style="left:135px;top:486px;font-size:28px;letter-spacing:.18em;line-height:1.2;white-space:nowrap">Pure energy. Real ingredients.</div>
+</div></div>
 
 <!-- 02 DETAILS / ICE 1.0-2.0 -->
 <div id="s2" class="scene clip" data-start="1.0" data-duration="1.15" data-track-index="2" style="z-index:2"><div class="fade" id="s2-fade">
@@ -118,12 +127,45 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
   function cam(id, a, b, start, dur, ease){ tl.fromTo(id, a, Object.assign({}, b, { duration: dur, ease: ease || "none" }), start); }
   function fade(id, start){ tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.16, ease: "power1.out" }, start); }
   function rise(sel, start, dur, dy, stag){ tl.fromTo(sel, { opacity: 0, y: dy || 26 }, { opacity: 1, y: 0, duration: dur || 0.5, ease: "power3.out", stagger: stag || 0 }, start); }
+  function lerp(a, b, t){ return a + (b - a) * t; }
+  function hex(c){ return "#" + c.map(function(v){ v = Math.round(v); return (v < 16 ? "0" : "") + v.toString(16); }).join(""); }
+  // extrude(): dark-green side layers (real z offsets) behind a cream face, plus a keyline and two shadows cast to the left (the photo's sun is on the right)
+  function extrude(el, text, n, step){
+    el.setAttribute("aria-label", text);
+    var depth = n * step, k = step / 1.2;
+    function shadow(dx, dy, dz, blur, alpha){
+      var sh = document.createElement("span");
+      sh.className = "shadow"; sh.setAttribute("aria-hidden", "true"); sh.textContent = text;
+      sh.style.color = "rgba(0,0,0," + alpha + ")"; sh.style.filter = "blur(" + blur + "px)";
+      sh.style.transform = "translate3d(" + dx + "px," + dy + "px," + (-depth - dz) + "px)";
+      el.appendChild(sh);
+    }
+    shadow(-34*k, 30*k, 30, 24*k, .62); shadow(-16*k, 15*k, 14, 10*k, .42); shadow(-7*k, 8*k, 2, 5*k, .50);
+    var bevel = [118,152,64], nearC = [40,66,24], farC = [6,13,6], bn = Math.max(1, Math.round(n * 0.09));
+    for (var i = n; i >= 1; i--) {
+      var c = i <= bn ? bevel : [lerp(nearC[0],farC[0],(i-bn-1)/(n-bn-1)), lerp(nearC[1],farC[1],(i-bn-1)/(n-bn-1)), lerp(nearC[2],farC[2],(i-bn-1)/(n-bn-1))];
+      var sp = document.createElement("span");
+      sp.className = "ex"; sp.setAttribute("aria-hidden", "true"); sp.textContent = text;
+      sp.style.color = hex(c); sp.style.transform = "translateZ(" + (-i * step) + "px)";
+      el.appendChild(sp);
+    }
+    var kk = document.createElement("span");
+    kk.className = "key"; kk.setAttribute("aria-hidden", "true"); kk.textContent = text; kk.style.transform = "translateZ(0.2px)"; el.appendChild(kk);
+    var f = document.createElement("span");
+    f.className = "face"; f.setAttribute("aria-hidden", "true"); f.textContent = text; f.style.transform = "translateZ(0.5px)"; el.appendChild(f);
+  }
+  extrude(document.getElementById("s1-w1"), "Iced", 14, 0.9);
+  extrude(document.getElementById("s1-w2"), "Matcha", 22, 1.2);
   function write(sel, start, dur){ tl.fromTo(sel, { clipPath: "inset(-10% 100% -10% 0)" }, { clipPath: "inset(-10% -5% -10% 0)", duration: dur || 0.7, ease: "power2.inOut" }, start); }
 
-  // 01 opening: slow push-in
-  cam("#s1-img", crop(262,14,646), crop(318,236,534), 0, 1.15);
-  tl.fromTo(["#s1-a","#s1-b"], { y: 16 }, { y: 0, duration: .7, ease: "power3.out", stagger: .08 }, 0);
-  rise("#s1-c", 0.15, .6, 14);
+  // 01 opening: slow push-in, dimensional title swings in (controlled yaw), subline follows
+  cam("#s1-img", crop(262,14,646), crop(318,185,534), 0, 1.15);
+  tl.fromTo("#s1-w1", { x: -1350, z: -240, rotationY: -44, rotationX: 5 }, { x: 0, z: 0, rotationY: -14, rotationX: 3, duration: .8, ease: "expo.out" }, 0.00);
+  tl.fromTo("#s1-w2", { x:  1350, z: -240, rotationY: -44, rotationX: 5 }, { x: 0, z: 0, rotationY: -14, rotationX: 3, duration: .8, ease: "expo.out" }, 0.10);
+  tl.fromTo("#s1-stage", { perspectiveOrigin: "39% 51.5%" }, { perspectiveOrigin: "61% 48.5%", duration: 1.15, ease: "sine.inOut" }, 0);
+  tl.fromTo("#s1-w1 .face", { backgroundPosition: "18% 0%, 0% 0%" }, { backgroundPosition: "82% 0%, 0% 0%", duration: .5, ease: "power2.inOut" }, 0.50);
+  tl.fromTo("#s1-w2 .face", { backgroundPosition: "18% 0%, 0% 0%" }, { backgroundPosition: "82% 0%, 0% 0%", duration: .5, ease: "power2.inOut" }, 0.57);
+  rise("#s1-c", 0.30, .40, 12);
   // 02 ice detail: extreme close, slow pan across the ice
   fade("#s2-fade", 1.0);
   cam("#s2-img", crop(392,440,360), crop(452,452,330), 1.0, 1.15);
