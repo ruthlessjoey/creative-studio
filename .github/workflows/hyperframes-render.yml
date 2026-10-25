@@ -58,6 +58,9 @@ jobs:
         working-directory: projects/${{ env.PROJECT }}/hyperframes
         run: |
           npx --yes "$HF" check --json --snapshots | tee ../check.json | jq '{ok, browserSkipped}'
+          echo "::group::Full check.json (diagnostic)"
+          jq '.' ../check.json
+          echo "::endgroup::"
           jq -e '.ok == true' ../check.json
 
       - name: Snapshots of key frames
