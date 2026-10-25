@@ -135,7 +135,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
     var depth = n * step, k = step / 1.2;
     function shadow(dx, dy, dz, blur, alpha){
       var sh = document.createElement("span");
-      sh.className = "shadow"; sh.setAttribute("aria-hidden", "true"); sh.textContent = text;
+      sh.className = "shadow"; sh.setAttribute("aria-hidden", "true"); sh.setAttribute("data-layout-allow-overlap", ""); sh.textContent = text;
       sh.style.color = "rgba(0,0,0," + alpha + ")"; sh.style.filter = "blur(" + blur + "px)";
       sh.style.transform = "translate3d(" + dx + "px," + dy + "px," + (-depth - dz) + "px)";
       el.appendChild(sh);
@@ -145,12 +145,12 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ground)}
     for (var i = n; i >= 1; i--) {
       var c = i <= bn ? bevel : [lerp(nearC[0],farC[0],(i-bn-1)/(n-bn-1)), lerp(nearC[1],farC[1],(i-bn-1)/(n-bn-1)), lerp(nearC[2],farC[2],(i-bn-1)/(n-bn-1))];
       var sp = document.createElement("span");
-      sp.className = "ex"; sp.setAttribute("aria-hidden", "true"); sp.textContent = text;
+      sp.className = "ex"; sp.setAttribute("aria-hidden", "true"); sp.setAttribute("data-layout-allow-overlap", ""); sp.textContent = text;
       sp.style.color = hex(c); sp.style.transform = "translateZ(" + (-i * step) + "px)";
       el.appendChild(sp);
     }
     var kk = document.createElement("span");
-    kk.className = "key"; kk.setAttribute("aria-hidden", "true"); kk.textContent = text; kk.style.transform = "translateZ(0.2px)"; el.appendChild(kk);
+    kk.className = "key"; kk.setAttribute("aria-hidden", "true"); kk.setAttribute("data-layout-allow-overlap", ""); kk.textContent = text; kk.style.transform = "translateZ(0.2px)"; el.appendChild(kk);
     var f = document.createElement("span");
     f.className = "face"; f.setAttribute("aria-hidden", "true"); f.textContent = text; f.style.transform = "translateZ(0.5px)"; el.appendChild(f);
   }
