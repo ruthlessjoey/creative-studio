@@ -21,3 +21,9 @@ description: Turns a brief into a visual concept, palette, typography direction,
 
 ## Quality criteria
 Concept fits the audience; palette has 3-5 colors; every deliverable has an assigned tool and an owner (Claude or you).
+
+## Photo-first rule (added)
+- When product photographs are supplied, the concept is built around them: keep the real cup, drink colour, ice, label and light. Direction decides crop, motion, type and edit, not a new product.
+- Distinguish in writing: ORIGINAL photo, CROP of the original, AI-MODIFIED, CODE-DRAWN (not allowed for the product itself).
+- Avoid generic ad looks: centered mockups, random floating objects, stock gradients. Prefer one strong idea per brand: light, material, type, negative space.
+- List every shot the storyboard needs that the photos cannot supply as a blocker with the next step (ask for the photo, or approve an image-edit workflow).

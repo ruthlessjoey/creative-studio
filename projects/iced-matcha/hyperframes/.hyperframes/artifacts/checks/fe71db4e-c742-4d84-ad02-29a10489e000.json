@@ -1,0 +1,4067 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 11,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "duplicate_media_discovery_risk",
+        "severity": "warning",
+        "message": "Detected 9 matching img entries with the same source/start/duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s1\"> is a timeline element that contains nested <div id=\"s1-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s1",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s2\"> is a timeline element that contains nested <div id=\"s2-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s2",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s3\"> is a timeline element that contains nested <div id=\"s3-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s3",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s4\"> is a timeline element that contains nested <div id=\"s4-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s4",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s5\"> is a timeline element that contains nested <div id=\"s5-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s5",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s6\"> is a timeline element that contains nested <div id=\"s6-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s6",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s6\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s7\"> is a timeline element that contains nested <div id=\"s7-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s7",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s7\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s8\"> is a timeline element that contains nested <div id=\"s8-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s8",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s8\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"s9\"> is a timeline element that contains nested <div id=\"s9-fade\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s9",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"s9\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"grain\"> is a timeline element that contains nested <div id=\"gr\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#grain",
+        "dataAttributes": {},
+        "sourceFile": "/home/runner/work/creative-studio/creative-studio/projects/iced-matcha/hyperframes/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"grain\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 65,
+    "findings": [
+      {
+        "code": "escaped_container",
+        "severity": "warning",
+        "time": 8.333,
+        "selector": "#s9-img",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": -2268.47,
+          "top": 0,
+          "right": 1084.51,
+          "bottom": 3352.99,
+          "width": 3352.99,
+          "height": 3352.99
+        },
+        "containerSelector": "#s9-fade > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -2268.47,
+          "y": 0,
+          "width": 3352.99,
+          "height": 3352.99
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 9.444,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          8.333,
+          9.444
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 120.67,
+          "top": 159.04,
+          "right": 484.82,
+          "bottom": 345.46,
+          "width": 364.15,
+          "height": 186.42
+        },
+        "containerSelector": "#s1-w2 > span:nth-of-type(28)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 120.67,
+          "y": 159.04,
+          "width": 364.15,
+          "height": 186.42
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(3)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 124.52,
+          "top": 136.24,
+          "right": 493.72,
+          "bottom": 326.36,
+          "width": 369.2,
+          "height": 190.12
+        },
+        "containerSelector": "#s1-w2 > span:nth-of-type(28)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.15,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.52,
+          "y": 136.24,
+          "width": 369.2,
+          "height": 190.12
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(4)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 124.48,
+          "top": 122.4,
+          "right": 497.17,
+          "bottom": 315.07,
+          "width": 372.69,
+          "height": 192.66
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.19,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.48,
+          "y": 122.4,
+          "width": 372.69,
+          "height": 192.66
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(5)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 128.17,
+          "top": 114.37,
+          "right": 501.9,
+          "bottom": 307.92,
+          "width": 373.73,
+          "height": 193.55
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 128.17,
+          "y": 114.37,
+          "width": 373.73,
+          "height": 193.55
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(6)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 127.72,
+          "top": 113.78,
+          "right": 501.66,
+          "bottom": 307.48,
+          "width": 373.94,
+          "height": 193.7
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 127.72,
+          "y": 113.78,
+          "width": 373.94,
+          "height": 193.7
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(7)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 127.27,
+          "top": 113.19,
+          "right": 501.42,
+          "bottom": 307.05,
+          "width": 374.15,
+          "height": 193.85
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 127.27,
+          "y": 113.19,
+          "width": 374.15,
+          "height": 193.85
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(8)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 126.82,
+          "top": 112.6,
+          "right": 501.18,
+          "bottom": 306.61,
+          "width": 374.36,
+          "height": 194.01
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 126.82,
+          "y": 112.6,
+          "width": 374.36,
+          "height": 194.01
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(9)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 126.37,
+          "top": 112.01,
+          "right": 500.94,
+          "bottom": 306.17,
+          "width": 374.57,
+          "height": 194.16
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 126.37,
+          "y": 112.01,
+          "width": 374.57,
+          "height": 194.16
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(10)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 125.92,
+          "top": 111.42,
+          "right": 500.69,
+          "bottom": 305.73,
+          "width": 374.78,
+          "height": 194.31
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 125.92,
+          "y": 111.42,
+          "width": 374.78,
+          "height": 194.31
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(11)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 125.47,
+          "top": 110.82,
+          "right": 500.45,
+          "bottom": 305.29,
+          "width": 374.99,
+          "height": 194.46
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 125.47,
+          "y": 110.82,
+          "width": 374.99,
+          "height": 194.46
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(12)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 125.01,
+          "top": 110.23,
+          "right": 500.21,
+          "bottom": 304.85,
+          "width": 375.2,
+          "height": 194.62
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 125.01,
+          "y": 110.23,
+          "width": 375.2,
+          "height": 194.62
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(13)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 124.56,
+          "top": 109.64,
+          "right": 499.97,
+          "bottom": 304.41,
+          "width": 375.41,
+          "height": 194.77
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.56,
+          "y": 109.64,
+          "width": 375.41,
+          "height": 194.77
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(14)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 124.11,
+          "top": 109.04,
+          "right": 499.73,
+          "bottom": 303.97,
+          "width": 375.62,
+          "height": 194.93
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.11,
+          "y": 109.04,
+          "width": 375.62,
+          "height": 194.93
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(15)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 123.65,
+          "top": 108.44,
+          "right": 499.48,
+          "bottom": 303.52,
+          "width": 375.83,
+          "height": 195.08
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 123.65,
+          "y": 108.44,
+          "width": 375.83,
+          "height": 195.08
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(16)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 123.2,
+          "top": 107.85,
+          "right": 499.24,
+          "bottom": 303.08,
+          "width": 376.04,
+          "height": 195.24
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 123.2,
+          "y": 107.85,
+          "width": 376.04,
+          "height": 195.24
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(17)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 122.74,
+          "top": 107.25,
+          "right": 499,
+          "bottom": 302.64,
+          "width": 376.25,
+          "height": 195.39
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 122.74,
+          "y": 107.25,
+          "width": 376.25,
+          "height": 195.39
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(18)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 122.29,
+          "top": 106.65,
+          "right": 498.75,
+          "bottom": 302.2,
+          "width": 376.46,
+          "height": 195.55
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 122.29,
+          "y": 106.65,
+          "width": 376.46,
+          "height": 195.55
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(19)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 121.73,
+          "top": 105.92,
+          "right": 498.45,
+          "bottom": 301.65,
+          "width": 376.72,
+          "height": 195.74
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 121.73,
+          "y": 105.92,
+          "width": 376.72,
+          "height": 195.74
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w1 > span:nth-of-type(20)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 121.58,
+          "top": 105.72,
+          "right": 498.37,
+          "bottom": 301.5,
+          "width": 376.79,
+          "height": 195.79
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Iced",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 121.58,
+          "y": 105.72,
+          "width": 376.79,
+          "height": 195.79
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 137.34,
+          "top": 230.26,
+          "right": 940.16,
+          "bottom": 549.05,
+          "width": 802.81,
+          "height": 318.79
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.11,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 137.34,
+          "y": 230.26,
+          "width": 802.81,
+          "height": 318.79
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(3)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 144.85,
+          "top": 203.32,
+          "right": 960.45,
+          "bottom": 529.59,
+          "width": 815.6,
+          "height": 326.27
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1) > div:nth-of-type(1)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.19,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 144.85,
+          "y": 203.32,
+          "width": 815.6,
+          "height": 326.27
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(4)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 146.8,
+          "top": 187.6,
+          "right": 971.06,
+          "bottom": 518.82,
+          "width": 824.27,
+          "height": 331.22
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.22,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146.8,
+          "y": 187.6,
+          "width": 824.27,
+          "height": 331.22
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(5)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 151.82,
+          "top": 177.15,
+          "right": 978.97,
+          "bottom": 510.46,
+          "width": 827.14,
+          "height": 333.31
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 151.82,
+          "y": 177.15,
+          "width": 827.14,
+          "height": 333.31
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(6)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 151.26,
+          "top": 176.4,
+          "right": 979.05,
+          "bottom": 510.06,
+          "width": 827.78,
+          "height": 333.66
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 151.26,
+          "y": 176.4,
+          "width": 827.78,
+          "height": 333.66
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(7)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 150.71,
+          "top": 175.64,
+          "right": 979.13,
+          "bottom": 509.66,
+          "width": 828.42,
+          "height": 334.02
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 150.71,
+          "y": 175.64,
+          "width": 828.42,
+          "height": 334.02
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(8)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 150.15,
+          "top": 174.88,
+          "right": 979.21,
+          "bottom": 509.25,
+          "width": 829.06,
+          "height": 334.37
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 150.15,
+          "y": 174.88,
+          "width": 829.06,
+          "height": 334.37
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(9)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 149.58,
+          "top": 174.13,
+          "right": 979.29,
+          "bottom": 508.85,
+          "width": 829.7,
+          "height": 334.72
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 149.58,
+          "y": 174.13,
+          "width": 829.7,
+          "height": 334.72
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(10)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 149.02,
+          "top": 173.37,
+          "right": 979.37,
+          "bottom": 508.45,
+          "width": 830.35,
+          "height": 335.08
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 149.02,
+          "y": 173.37,
+          "width": 830.35,
+          "height": 335.08
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(11)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 148.46,
+          "top": 172.61,
+          "right": 979.45,
+          "bottom": 508.04,
+          "width": 830.99,
+          "height": 335.44
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 148.46,
+          "y": 172.61,
+          "width": 830.99,
+          "height": 335.44
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(12)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 147.9,
+          "top": 171.84,
+          "right": 979.53,
+          "bottom": 507.64,
+          "width": 831.64,
+          "height": 335.79
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 147.9,
+          "y": 171.84,
+          "width": 831.64,
+          "height": 335.79
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(13)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 147.33,
+          "top": 171.08,
+          "right": 979.61,
+          "bottom": 507.23,
+          "width": 832.28,
+          "height": 336.15
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 147.33,
+          "y": 171.08,
+          "width": 832.28,
+          "height": 336.15
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(14)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 146.77,
+          "top": 170.31,
+          "right": 979.7,
+          "bottom": 506.82,
+          "width": 832.93,
+          "height": 336.51
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146.77,
+          "y": 170.31,
+          "width": 832.93,
+          "height": 336.51
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(15)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 146.2,
+          "top": 169.55,
+          "right": 979.78,
+          "bottom": 506.42,
+          "width": 833.58,
+          "height": 336.87
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146.2,
+          "y": 169.55,
+          "width": 833.58,
+          "height": 336.87
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(16)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 145.63,
+          "top": 168.78,
+          "right": 979.86,
+          "bottom": 506.01,
+          "width": 834.23,
+          "height": 337.23
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 145.63,
+          "y": 168.78,
+          "width": 834.23,
+          "height": 337.23
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(17)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 145.07,
+          "top": 168.01,
+          "right": 979.94,
+          "bottom": 505.6,
+          "width": 834.88,
+          "height": 337.59
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 145.07,
+          "y": 168.01,
+          "width": 834.88,
+          "height": 337.59
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(18)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 144.5,
+          "top": 167.24,
+          "right": 980.02,
+          "bottom": 505.19,
+          "width": 835.53,
+          "height": 337.95
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 144.5,
+          "y": 167.24,
+          "width": 835.53,
+          "height": 337.95
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(19)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 143.93,
+          "top": 166.47,
+          "right": 980.11,
+          "bottom": 504.78,
+          "width": 836.18,
+          "height": 338.31
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 143.93,
+          "y": 166.47,
+          "width": 836.18,
+          "height": 338.31
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(20)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 143.36,
+          "top": 165.7,
+          "right": 980.19,
+          "bottom": 504.37,
+          "width": 836.83,
+          "height": 338.68
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 143.36,
+          "y": 165.7,
+          "width": 836.83,
+          "height": 338.68
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(21)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 142.79,
+          "top": 164.92,
+          "right": 980.27,
+          "bottom": 503.96,
+          "width": 837.48,
+          "height": 339.04
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 142.79,
+          "y": 164.92,
+          "width": 837.48,
+          "height": 339.04
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(22)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 142.21,
+          "top": 164.14,
+          "right": 980.35,
+          "bottom": 503.55,
+          "width": 838.14,
+          "height": 339.4
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 142.21,
+          "y": 164.14,
+          "width": 838.14,
+          "height": 339.4
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(23)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 141.64,
+          "top": 163.37,
+          "right": 980.44,
+          "bottom": 503.14,
+          "width": 838.8,
+          "height": 339.77
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 141.64,
+          "y": 163.37,
+          "width": 838.8,
+          "height": 339.77
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(24)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 141.07,
+          "top": 162.59,
+          "right": 980.52,
+          "bottom": 502.72,
+          "width": 839.45,
+          "height": 340.14
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 141.07,
+          "y": 162.59,
+          "width": 839.45,
+          "height": 340.14
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(25)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 140.49,
+          "top": 161.81,
+          "right": 980.6,
+          "bottom": 502.31,
+          "width": 840.11,
+          "height": 340.5
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.26,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 140.49,
+          "y": 161.81,
+          "width": 840.11,
+          "height": 340.5
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(26)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 139.92,
+          "top": 161.03,
+          "right": 980.69,
+          "bottom": 501.9,
+          "width": 840.77,
+          "height": 340.87
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 139.92,
+          "y": 161.03,
+          "width": 840.77,
+          "height": 340.87
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(27)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 139.24,
+          "top": 160.11,
+          "right": 980.78,
+          "bottom": 501.41,
+          "width": 841.54,
+          "height": 341.3
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 139.24,
+          "y": 160.11,
+          "width": 841.54,
+          "height": 341.3
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-w2 > span:nth-of-type(28)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 139.1,
+          "top": 159.92,
+          "right": 980.8,
+          "bottom": 501.31,
+          "width": 841.71,
+          "height": 341.39
+        },
+        "containerSelector": "#s1-w1 > span:nth-of-type(20)",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.3,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 139.1,
+          "y": 159.92,
+          "width": 841.71,
+          "height": 341.39
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#s1-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -579.1,
+          "top": -232.94,
+          "right": 1655.68,
+          "bottom": 2001.84,
+          "width": 2234.78,
+          "height": 2234.78
+        },
+        "containerSelector": "#s1-stage > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -23.96,
+          "top": -39.19,
+          "right": 1100.59,
+          "bottom": 1960.01,
+          "width": 1124.55,
+          "height": 1999.2
+        },
+        "overflow": {
+          "left": 555.14,
+          "right": 555.09,
+          "top": 193.75,
+          "bottom": 41.83
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -579.1,
+          "y": -232.94,
+          "width": 2234.78,
+          "height": 2234.78
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 0.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 0.556,
+        "selector": "#gr",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -538,
+          "top": -306,
+          "right": 1162,
+          "bottom": 2194,
+          "width": 1700,
+          "height": 2500
+        },
+        "containerSelector": "#grain",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 538,
+          "right": 82,
+          "top": 306,
+          "bottom": 274
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -538,
+          "y": -306,
+          "width": 1700,
+          "height": 2500
+        },
+        "firstSeen": 0.556,
+        "lastSeen": 9.444,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          0.556,
+          1.667,
+          2.778,
+          3.889,
+          5,
+          6.111,
+          7.222,
+          8.333,
+          9.444
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 1.667,
+        "selector": "#s2-txt > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 146,
+          "top": 342,
+          "right": 468.52,
+          "bottom": 571,
+          "width": 322.52,
+          "height": 229
+        },
+        "containerSelector": "#s2-img",
+        "text": "Matcha",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146,
+          "y": 342,
+          "width": 322.52,
+          "height": 229
+        },
+        "firstSeen": 1.667,
+        "lastSeen": 1.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.667
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.667,
+        "selector": "#s2-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1351.81,
+          "top": -1412.33,
+          "right": 2343.17,
+          "bottom": 2282.64,
+          "width": 3694.98,
+          "height": 3694.98
+        },
+        "containerSelector": "#s2-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 1351.81,
+          "right": 1263.17,
+          "top": 1412.33,
+          "bottom": 362.64
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1351.81,
+          "y": -1412.33,
+          "width": 3694.98,
+          "height": 3694.98
+        },
+        "firstSeen": 1.667,
+        "lastSeen": 1.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.667
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 1.667,
+        "selector": "#s2-img",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": -1351.81,
+          "top": -1412.33,
+          "right": 2343.17,
+          "bottom": 2282.64,
+          "width": 3694.98,
+          "height": 3694.98
+        },
+        "containerSelector": "#s2-fade > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1351.81,
+          "y": -1412.33,
+          "width": 3694.98,
+          "height": 3694.98
+        },
+        "firstSeen": 1.667,
+        "lastSeen": 1.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.667
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 2.778,
+        "selector": "#s3-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1331.91,
+          "top": -1710.55,
+          "right": 2424.26,
+          "bottom": 2045.62,
+          "width": 3756.17,
+          "height": 3756.17
+        },
+        "containerSelector": "#s3-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 1331.91,
+          "right": 1344.26,
+          "top": 1710.55,
+          "bottom": 125.62
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1331.91,
+          "y": -1710.55,
+          "width": 3756.17,
+          "height": 3756.17
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 2.778,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          2.778
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 2.778,
+        "selector": "#s3-img",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": -1331.91,
+          "top": -1710.55,
+          "right": 2424.26,
+          "bottom": 2045.62,
+          "width": 3756.17,
+          "height": 3756.17
+        },
+        "containerSelector": "#s3-fade > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1331.91,
+          "y": -1710.55,
+          "width": 3756.17,
+          "height": 3756.17
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 2.778,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          2.778
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 3.889,
+        "selector": "#s4-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1482.58,
+          "top": -2145.94,
+          "right": 2908.2,
+          "bottom": 2244.83,
+          "width": 4390.78,
+          "height": 4390.78
+        },
+        "containerSelector": "#s4-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 1482.58,
+          "right": 1828.2,
+          "top": 2145.94,
+          "bottom": 324.83
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1482.58,
+          "y": -2145.94,
+          "width": 4390.78,
+          "height": 4390.78
+        },
+        "firstSeen": 3.889,
+        "lastSeen": 3.889,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.889
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 3.889,
+        "selector": "#s4-img",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": -1482.58,
+          "top": -2145.94,
+          "right": 2908.2,
+          "bottom": 2244.83,
+          "width": 4390.78,
+          "height": 4390.78
+        },
+        "containerSelector": "#s4-fade > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1482.58,
+          "y": -2145.94,
+          "width": 4390.78,
+          "height": 4390.78
+        },
+        "firstSeen": 3.889,
+        "lastSeen": 3.889,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.889
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 5,
+        "selector": "#s5-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -500.85,
+          "top": -112.14,
+          "right": 1581.75,
+          "bottom": 1970.46,
+          "width": 2082.6,
+          "height": 2082.6
+        },
+        "containerSelector": "#s5-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 500.85,
+          "right": 501.75,
+          "top": 112.14,
+          "bottom": 50.46
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -500.85,
+          "y": -112.14,
+          "width": 2082.6,
+          "height": 2082.6
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s6-a",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 884.73,
+          "top": 714,
+          "right": 1000,
+          "bottom": 753,
+          "width": 115.27,
+          "height": 39
+        },
+        "containerSelector": "#s7-fade > div:nth-of-type(2)",
+        "text": "Rich",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 884.73,
+          "y": 714,
+          "width": 115.27,
+          "height": 39
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s6-b",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 801.44,
+          "top": 781.19,
+          "right": 1000,
+          "bottom": 820.19,
+          "width": 198.56,
+          "height": 39
+        },
+        "containerSelector": "#s7-fade > div:nth-of-type(2)",
+        "text": "Smooth",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 801.44,
+          "y": 781.19,
+          "width": 198.56,
+          "height": 39
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s6-c",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 700.59,
+          "top": 848.38,
+          "right": 1000,
+          "bottom": 887.38,
+          "width": 299.41,
+          "height": 39
+        },
+        "containerSelector": "#s7-fade > div:nth-of-type(2)",
+        "text": "Refreshing",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 700.59,
+          "y": 848.38,
+          "width": 299.41,
+          "height": 39
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s6-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1380.19,
+          "top": -1358.4,
+          "right": 2435.24,
+          "bottom": 2457.03,
+          "width": 3815.43,
+          "height": 3815.43
+        },
+        "containerSelector": "#s6-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 1380.19,
+          "right": 1355.24,
+          "top": 1358.4,
+          "bottom": 537.03
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1380.19,
+          "y": -1358.4,
+          "width": 3815.43,
+          "height": 3815.43
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s7-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -992.35,
+          "top": -1047.84,
+          "right": 2087.56,
+          "bottom": 2032.07,
+          "width": 3079.91,
+          "height": 3079.91
+        },
+        "containerSelector": "#s7-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 992.35,
+          "right": 1007.56,
+          "top": 1047.84,
+          "bottom": 112.07
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -992.35,
+          "y": -1047.84,
+          "width": 3079.91,
+          "height": 3079.91
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s6-img",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": -1380.19,
+          "top": -1358.4,
+          "right": 2435.24,
+          "bottom": 2457.03,
+          "width": 3815.43,
+          "height": 3815.43
+        },
+        "containerSelector": "#s6-fade > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -1380.19,
+          "y": -1358.4,
+          "width": 3815.43,
+          "height": 3815.43
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 6.111,
+        "selector": "#s7-img",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": -992.35,
+          "top": -1047.84,
+          "right": 2087.56,
+          "bottom": 2032.07,
+          "width": 3079.91,
+          "height": 3079.91
+        },
+        "containerSelector": "#s7-fade > div:nth-of-type(1)",
+        "text": "",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -992.35,
+          "y": -1047.84,
+          "width": 3079.91,
+          "height": 3079.91
+        },
+        "firstSeen": 6.111,
+        "lastSeen": 6.111,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.111
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 7.222,
+        "selector": "#s8-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -568.66,
+          "top": -185.18,
+          "right": 1699.38,
+          "bottom": 2082.87,
+          "width": 2268.05,
+          "height": 2268.05
+        },
+        "containerSelector": "#s8-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 568.66,
+          "right": 619.38,
+          "top": 185.18,
+          "bottom": 162.87
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -568.66,
+          "y": -185.18,
+          "width": 2268.05,
+          "height": 2268.05
+        },
+        "firstSeen": 7.222,
+        "lastSeen": 7.222,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          7.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 8.333,
+        "selector": "#s9-img",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -2268.47,
+          "top": 0,
+          "right": 1084.51,
+          "bottom": 3352.99,
+          "width": 3352.99,
+          "height": 3352.99
+        },
+        "containerSelector": "#s9-fade > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 2268.47,
+          "right": 4.51,
+          "bottom": 1432.99
+        },
+        "dataAttributes": {
+          "data-var-src": "product",
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -2268.47,
+          "y": 0,
+          "width": 3352.99,
+          "height": 3352.99
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 9.444,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          8.333,
+          9.444
+        ]
+      }
+    ],
+    "duration": 10,
+    "samples": [
+      0.556,
+      1.667,
+      2.778,
+      3.889,
+      5,
+      6.111,
+      7.222,
+      8.333,
+      9.444
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 66,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 43,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.78:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(28,25,20)",
+        "bg": "rgb(73,67,53)",
+        "ratio": 1.78,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(144,142,140)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 121.13363647460938,
+          "y": 177.44601440429688,
+          "width": 363.41412353515625,
+          "height": 151.54153442382812
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.49:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(41,37,29)",
+        "bg": "rgb(71,64,50)",
+        "ratio": 1.49,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(141,139,134)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(3)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.988037109375,
+          "y": 154.87193298339844,
+          "width": 368.4584045410156,
+          "height": 154.8252716064453
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.6:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(36,33,27)",
+        "bg": "rgb(71,66,53)",
+        "ratio": 1.6,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(142,141,138)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(4)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.94953155517578,
+          "y": 141.1987762451172,
+          "width": 371.9525451660156,
+          "height": 157.06495666503906
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.94:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(6,13,6)",
+        "bg": "rgb(71,65,51)",
+        "ratio": 1.94,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(138,141,138)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(5)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 128.63833618164062,
+          "y": 133.2035675048828,
+          "width": 372.994140625,
+          "height": 157.8842010498047
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.88:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(9,17,8)",
+        "bg": "rgb(70,65,50)",
+        "ratio": 1.88,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(137,141,137)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(6)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 128.1900177001953,
+          "y": 132.6256103515625,
+          "width": 373.2017822265625,
+          "height": 158.01510620117188
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.72:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(12,22,9)",
+        "bg": "rgb(67,61,48)",
+        "ratio": 1.72,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(132,137,131)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(7)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 127.74117279052734,
+          "y": 132.04690551757812,
+          "width": 373.4096984863281,
+          "height": 158.146240234375
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.8:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(15,26,11)",
+        "bg": "rgb(72,66,53)",
+        "ratio": 1.8,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(137,143,135)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(8)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 127.29178619384766,
+          "y": 131.46746826171875,
+          "width": 373.6178283691406,
+          "height": 158.277587890625
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.72:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(17,31,12)",
+        "bg": "rgb(72,66,53)",
+        "ratio": 1.72,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(136,143,134)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(9)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 126.84186553955078,
+          "y": 130.88729858398438,
+          "width": 373.8262023925781,
+          "height": 158.40911865234375
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.65:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(20,35,14)",
+        "bg": "rgb(73,66,52)",
+        "ratio": 1.65,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(136,144,133)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(10)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 126.39140319824219,
+          "y": 130.30636596679688,
+          "width": 374.0347900390625,
+          "height": 158.54086303710938
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.57:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(23,40,15)",
+        "bg": "rgb(73,66,52)",
+        "ratio": 1.57,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(135,144,131)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(11)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 125.94039916992188,
+          "y": 129.72470092773438,
+          "width": 374.24359130859375,
+          "height": 158.67282104492188
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.42:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(26,44,17)",
+        "bg": "rgb(69,63,49)",
+        "ratio": 1.42,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(131,141,126)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(12)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 125.48885345458984,
+          "y": 129.14230346679688,
+          "width": 374.45263671875,
+          "height": 158.80496215820312
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.35:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(29,48,18)",
+        "bg": "rgb(69,63,49)",
+        "ratio": 1.35,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(130,141,124)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(13)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 125.03677368164062,
+          "y": 128.55914306640625,
+          "width": 374.66192626953125,
+          "height": 158.93734741210938
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.29:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(32,53,20)",
+        "bg": "rgb(70,64,52)",
+        "ratio": 1.29,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(131,143,124)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(14)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.58414459228516,
+          "y": 127.97523498535156,
+          "width": 374.8714294433594,
+          "height": 159.0699005126953
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.21:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(34,57,21)",
+        "bg": "rgb(69,63,49)",
+        "ratio": 1.21,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(128,142,121)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(15)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 124.13097381591797,
+          "y": 127.39057922363281,
+          "width": 375.0811462402344,
+          "height": 159.2026824951172
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.13:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(37,62,23)",
+        "bg": "rgb(69,63,49)",
+        "ratio": 1.13,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(128,142,119)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(16)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 123.67725372314453,
+          "y": 126.80517578125,
+          "width": 375.2911376953125,
+          "height": 159.33566284179688
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.08:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(40,66,24)",
+        "bg": "rgb(70,64,51)",
+        "ratio": 1.08,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(129,144,119)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(17)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 123.22299194335938,
+          "y": 126.21902465820312,
+          "width": 375.5013427734375,
+          "height": 159.4688720703125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.43:1; WCAG AA requires 3:1.",
+        "text": "Iced",
+        "fg": "rgb(22,40,14)",
+        "bg": "rgb(67,60,46)",
+        "ratio": 1.43,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(128,138,124)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(19)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 122.21156311035156,
+          "y": 124.91374969482422,
+          "width": 375.96929931640625,
+          "height": 159.76559448242188
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.16:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(36,32,25)",
+        "bg": "rgb(94,83,67)",
+        "ratio": 2.16,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(166,164,161)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 138.10157775878906,
+          "y": 261.21612548828125,
+          "width": 801.9937744140625,
+          "height": 260.61376953125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.73:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(53,49,39)",
+        "bg": "rgb(92,84,68)",
+        "ratio": 1.73,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(166,165,160)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(3)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 145.60980224609375,
+          "y": 234.6858367919922,
+          "width": 814.7544555664062,
+          "height": 267.3685302734375
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.81:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(43,40,32)",
+        "bg": "rgb(86,79,64)",
+        "ratio": 1.81,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(159,158,154)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(4)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 147.5618438720703,
+          "y": 219.26425170898438,
+          "width": 823.4017333984375,
+          "height": 271.78472900390625
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.42:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(6,13,6)",
+        "bg": "rgb(86,79,64)",
+        "ratio": 2.42,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(156,159,156)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(5)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 152.58587646484375,
+          "y": 208.884521484375,
+          "width": 826.270751953125,
+          "height": 273.7593078613281
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.25:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(8,16,7)",
+        "bg": "rgb(84,75,59)",
+        "ratio": 2.25,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,154,150)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(6)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 152.02865600585938,
+          "y": 208.15699768066406,
+          "width": 826.908203125,
+          "height": 274.0645751953125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.27:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(10,19,8)",
+        "bg": "rgb(85,77,61)",
+        "ratio": 2.27,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(153,157,152)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(7)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 151.4705810546875,
+          "y": 207.42820739746094,
+          "width": 827.5467529296875,
+          "height": 274.37042236328125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.23:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(11,21,9)",
+        "bg": "rgb(85,77,61)",
+        "ratio": 2.23,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(153,157,152)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(8)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 150.9116668701172,
+          "y": 206.69813537597656,
+          "width": 828.1861572265625,
+          "height": 274.67694091796875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.12:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(13,24,10)",
+        "bg": "rgb(83,75,59)",
+        "ratio": 2.12,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(149,154,147)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(9)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 150.35189819335938,
+          "y": 205.96678161621094,
+          "width": 828.82666015625,
+          "height": 274.98406982421875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.11:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(15,27,11)",
+        "bg": "rgb(86,76,61)",
+        "ratio": 2.11,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(151,156,149)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(10)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 149.79127502441406,
+          "y": 205.23414611816406,
+          "width": 829.4681396484375,
+          "height": 275.2918701171875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.2:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(17,30,12)",
+        "bg": "rgb(89,81,65)",
+        "ratio": 2.2,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(157,162,155)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(11)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 149.22979736328125,
+          "y": 204.50021362304688,
+          "width": 830.1105346679688,
+          "height": 275.6003112792969
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.99:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(19,33,13)",
+        "bg": "rgb(86,76,60)",
+        "ratio": 1.99,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,157,148)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(12)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 148.66748046875,
+          "y": 203.76498413085938,
+          "width": 830.7539672851562,
+          "height": 275.9093933105469
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.01:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(20,35,14)",
+        "bg": "rgb(86,78,64)",
+        "ratio": 2.01,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(153,159,150)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(13)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 148.1042938232422,
+          "y": 203.02847290039062,
+          "width": 831.3984375,
+          "height": 276.2191162109375
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.94:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(22,38,15)",
+        "bg": "rgb(86,78,63)",
+        "ratio": 1.94,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(152,159,149)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(14)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 147.54025268554688,
+          "y": 202.29066467285156,
+          "width": 832.0438232421875,
+          "height": 276.52947998046875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.85:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(24,41,15)",
+        "bg": "rgb(85,77,62)",
+        "ratio": 1.85,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,158,146)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(15)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146.975341796875,
+          "y": 201.55154418945312,
+          "width": 832.6903076171875,
+          "height": 276.84051513671875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.79:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(26,44,16)",
+        "bg": "rgb(87,77,59)",
+        "ratio": 1.79,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,158,145)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(16)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 146.40957641601562,
+          "y": 200.81112670898438,
+          "width": 833.3377685546875,
+          "height": 277.15216064453125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.75:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(27,46,17)",
+        "bg": "rgb(87,77,62)",
+        "ratio": 1.75,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,159,146)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(17)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 145.8429412841797,
+          "y": 200.06939697265625,
+          "width": 833.9862670898438,
+          "height": 277.4645080566406
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.68:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(29,49,18)",
+        "bg": "rgb(85,77,60)",
+        "ratio": 1.68,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(149,158,143)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(18)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 145.27545166015625,
+          "y": 199.3263397216797,
+          "width": 834.6357421875,
+          "height": 277.77752685546875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.61:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(31,52,19)",
+        "bg": "rgb(85,77,60)",
+        "ratio": 1.61,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(148,158,142)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(19)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 144.7070770263672,
+          "y": 198.5819854736328,
+          "width": 835.2862548828125,
+          "height": 278.09112548828125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.66:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(33,55,20)",
+        "bg": "rgb(90,81,65)",
+        "ratio": 1.66,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(154,164,148)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(20)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 144.13784790039062,
+          "y": 197.8363037109375,
+          "width": 835.937744140625,
+          "height": 278.4054260253906
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.52:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(35,58,21)",
+        "bg": "rgb(87,78,64)",
+        "ratio": 1.52,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,161,143)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(21)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 143.56773376464844,
+          "y": 197.0893096923828,
+          "width": 836.5902709960938,
+          "height": 278.72039794921875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.45:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(36,60,22)",
+        "bg": "rgb(85,77,62)",
+        "ratio": 1.45,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(147,159,140)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(22)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 142.9967498779297,
+          "y": 196.34097290039062,
+          "width": 837.2438354492188,
+          "height": 279.0360107421875
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.44:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(38,63,23)",
+        "bg": "rgb(88,79,64)",
+        "ratio": 1.44,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(149,162,142)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(23)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 142.4248809814453,
+          "y": 195.59130859375,
+          "width": 837.8984375,
+          "height": 279.3523254394531
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.33:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(40,66,24)",
+        "bg": "rgb(86,76,62)",
+        "ratio": 1.33,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(145,159,137)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(24)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 141.85214233398438,
+          "y": 194.84031677246094,
+          "width": 838.5540771484375,
+          "height": 279.66925048828125
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.44:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(118,152,64)",
+        "bg": "rgb(87,79,64)",
+        "ratio": 2.44,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(139,168,93)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(25)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 141.2785186767578,
+          "y": 194.08799743652344,
+          "width": 839.210693359375,
+          "height": 279.98687744140625
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.33:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(118,152,64)",
+        "bg": "rgb(90,82,65)",
+        "ratio": 2.33,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(143,171,98)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(26)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 140.7040252685547,
+          "y": 193.33432006835938,
+          "width": 839.8683471679688,
+          "height": 280.3052062988281
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.87:1; WCAG AA requires 3:1.",
+        "text": "Matcha",
+        "fg": "rgb(22,40,14)",
+        "bg": "rgb(85,77,59)",
+        "ratio": 1.87,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(150,158,146)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(27)",
+        "dataAttributes": {
+          "data-layout-allow-overlap": ""
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 140.03265380859375,
+          "y": 192.45333862304688,
+          "width": 840.636962890625,
+          "height": 280.6773986816406
+        },
+        "time": 0.556,
+        "times": [
+          0.556
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      0.556,
+      2.778,
+      5,
+      7.222,
+      9.444
+    ],
+    "checked": 52,
+    "passed": 9
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Pure energy. Real ingredients.\" (4 words) is on screen 0.80 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Pure energy. Real ingredients.",
+        "selector": "#s1-c",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 135,
+          "y": 490.79,
+          "width": 662.86,
+          "height": 33.99999999999994
+        },
+        "time": 0.367,
+        "words": 4,
+        "seconds": 0.805,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Pure energy.Real ingredients.\" (4 words) is on screen 0.67 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Pure energy.Real ingredients.",
+        "selector": "#s7-sub",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 80,
+          "y": 585.09,
+          "width": 375.97,
+          "height": 84.50999999999999
+        },
+        "time": 6.5,
+        "words": 4,
+        "seconds": 0.672,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Iced Matcha\" (2 words) is on screen 1.83 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Iced Matcha",
+        "selector": "#s9-a",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 198.86,
+          "y": 813.34,
+          "width": 697.87,
+          "height": 104
+        },
+        "time": 8.172,
+        "words": 2,
+        "seconds": 1.832,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Pure energy. Real ingredients.\" (4 words) is on screen 1.54 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Pure energy. Real ingredients.",
+        "selector": "#s9-b",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 219.2,
+          "y": 939.54,
+          "width": 646.0699999999999,
+          "height": 34
+        },
+        "time": 8.469,
+        "words": 4,
+        "seconds": 1.535,
+        "floorSeconds": 2
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 80
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      ".hyperframes/artifacts/snapshots/c481dd8f-b22b-4f22-8721-790e2c1a5f97/frame-00-at-0.6s.png",
+      ".hyperframes/artifacts/snapshots/c481dd8f-b22b-4f22-8721-790e2c1a5f97/frame-01-at-2.8s.png",
+      ".hyperframes/artifacts/snapshots/c481dd8f-b22b-4f22-8721-790e2c1a5f97/frame-02-at-5.0s.png",
+      ".hyperframes/artifacts/snapshots/c481dd8f-b22b-4f22-8721-790e2c1a5f97/frame-03-at-7.2s.png",
+      ".hyperframes/artifacts/snapshots/c481dd8f-b22b-4f22-8721-790e2c1a5f97/frame-04-at-9.4s.png"
+    ],
+    "times": [
+      0.556,
+      2.778,
+      5,
+      7.222,
+      9.444
+    ],
+    "findingFiles": []
+  }
+}

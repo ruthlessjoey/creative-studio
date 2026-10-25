@@ -1,0 +1,111 @@
+name: HyperFrames render
+
+# Renders a HyperFrames project (projects/<name>/hyperframes) to MP4 with the official CLI,
+# gates it with `check`, validates the file with ffprobe, and commits the result back.
+# Free: GitHub-hosted runner, public repo, open-source CLI (Apache-2.0), no paid API.
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: "Project folder name under projects/ (lowercase, e.g. iced-matcha)"
+        required: true
+        default: "iced-matcha"
+  push:
+    branches: [iced-matcha-hyperframes]
+    paths:
+      - "projects/iced-matcha/hyperframes/**"
+      - ".github/workflows/hyperframes-render.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      PROJECT: ${{ inputs.project || 'iced-matcha' }}
+      HF: "hyperframes@0.8.185"
+      HYPERFRAMES_NO_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate project name
+        run: |
+          case "$PROJECT" in (*[!a-z0-9-]*|"") echo "bad project name"; exit 1;; esac
+          test -f "projects/$PROJECT/hyperframes/index.html"
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg jq
+
+      - name: Browser for HyperFrames
+        working-directory: projects/${{ env.PROJECT }}/hyperframes
+        run: npx --yes "$HF" browser ensure
+
+      - name: Doctor
+        working-directory: projects/${{ env.PROJECT }}/hyperframes
+        run: |
+          npx --yes "$HF" doctor --json | tee ../doctor.json | jq '{ok, checks: [.checks[] | {name, ok}]}' || true
+
+      - name: Check (lint, runtime, layout, contrast)
+        working-directory: projects/${{ env.PROJECT }}/hyperframes
+        run: |
+          npx --yes "$HF" check --json --snapshots | tee ../check.json | jq '{ok, browserSkipped}'
+          echo "::group::Full check.json (diagnostic)"
+          jq '.' ../check.json
+          echo "::endgroup::"
+          jq -e '.ok == true' ../check.json
+
+      - name: Snapshots of key frames
+        working-directory: projects/${{ env.PROJECT }}/hyperframes
+        run: npx --yes "$HF" snapshot --at 0.1,1.5,2.5,3.5,4.5,5.5,6.5,7.5,9 || true
+
+      - name: Render
+        working-directory: projects/${{ env.PROJECT }}/hyperframes
+        run: |
+          mkdir -p ../out
+          npx --yes "$HF" render --quality delivery --output "../out/$PROJECT-9x16.mp4" 2>&1 | tee ../render.log
+
+      - name: Validate the MP4
+        run: |
+          f="projects/$PROJECT/out/$PROJECT-9x16.mp4"
+          test -s "$f"
+          ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,duration -of json "$f" | tee "projects/$PROJECT/out/ffprobe.json"
+          jq -e '[.streams[] | select(.codec_type=="video")][0] | (.width==1080 and .height==1920)' "projects/$PROJECT/out/ffprobe.json"
+          jq -e '[.streams[] | select(.codec_type=="video")][0].duration | tonumber | (. > 9.5 and . < 10.6)' "projects/$PROJECT/out/ffprobe.json"
+          ffmpeg -v error -ss 5 -i "$f" -frames:v 1 "projects/$PROJECT/out/frame-5s.png"
+          ffmpeg -i "$f" -af volumedetect -f null - 2>&1 | grep -E "mean_volume|max_volume" | tee "projects/$PROJECT/out/audio-levels.txt"
+
+      - name: Make a phone-friendly share copy (the delivery render is too big for git)
+        run: |
+          ffmpeg -y -v error -i "projects/$PROJECT/out/$PROJECT-9x16.mp4" -c:v libx264 -crf 27 -preset slow -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart "projects/$PROJECT/out/$PROJECT-9x16-share.mp4"
+          ls -la "projects/$PROJECT/out"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hyperframes-${{ env.PROJECT }}
+          path: |
+            projects/${{ env.PROJECT }}/out/
+            projects/${{ env.PROJECT }}/*.json
+            projects/${{ env.PROJECT }}/render.log
+            projects/${{ env.PROJECT }}/hyperframes/.hyperframes/artifacts/
+
+      - name: Commit render outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "projects/$PROJECT/out/$PROJECT-9x16-share.mp4" "projects/$PROJECT/out/ffprobe.json" "projects/$PROJECT/out/frame-5s.png" "projects/$PROJECT/out/audio-levels.txt" "projects/$PROJECT/check.json" "projects/$PROJECT/doctor.json" "projects/$PROJECT/render.log" 2>&1 || true
+          git add -f "projects/$PROJECT/hyperframes/.hyperframes/artifacts" 2>&1 || true
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          out=$(git commit -m "render: $PROJECT via HyperFrames [skip ci]" 2>&1) || { echo "::error::commit failed: $(echo "$out" | tr '\n' ' ')"; exit 1; }
+          git fetch -q origin "$GITHUB_REF_NAME" || true
+          git rebase --autostash "origin/$GITHUB_REF_NAME" 2>&1 || true
+          out=$(git push origin "HEAD:refs/heads/$GITHUB_REF_NAME" 2>&1) || { echo "::error::push failed: $(echo "$out" | tr '\n' ' ')"; git status --short | head -20; exit 1; }
+          echo "$out"
